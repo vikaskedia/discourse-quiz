@@ -9,11 +9,11 @@ nl:
   js:
     voting:
       allow_topic_voting: "Sta gebruikers toe om te stemmen op onderwerpen in deze categorie"
-      vote_title: "Stem"
-      vote_title_plural: "Stemmen"
-      voted_title: "Gestemd"
+      quiz_title: "Stem"
+      quiz_title_plural: "Stemmen"
+      quizd_title: "Gestemd"
       voting_closed_title: "Gesloten"
       voting_limit: "Limiet"
     filters:
-      votes:
+      quizs:
         title: "Stemmen"

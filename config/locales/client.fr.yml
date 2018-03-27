@@ -8,22 +8,22 @@
 fr:
   js:
     voting:
-      reached_limit: "Vous n'avez plus de votes disponibles, enlevez-en un !"
-      list_votes: "Lister vos votes"
-      votes_nav_help: "sujets les plus votés"
-      voted: "Vous avez voté pour ce sujet"
-      allow_topic_voting: "Autoriser les utilisateurs à voter dans cette catégorie"
-      vote_title: "Vote"
-      vote_title_plural: "Votes"
-      voted_title: "Voté"
+      reached_limit: "Vous n'avez plus de quizs disponibles, enlevez-en un !"
+      list_quizs: "Lister vos quizs"
+      quizs_nav_help: "sujets les plus votés"
+      quizd: "Vous avez voté pour ce sujet"
+      allow_topic_voting: "Autoriser les utilisateurs à quizr dans cette catégorie"
+      quiz_title: "Vote"
+      quiz_title_plural: "Votes"
+      quizd_title: "Voté"
       voting_closed_title: "Fermé"
       voting_limit: "Limite"
-      votes_left:
-        one: "Vous avec 1 vote restant, consultez <a href='{{path}}'>vos votes</a>."
-        other: "Vous avez {{count}} votes restant, consultez <a href='{{path}}'>vos votes</a>."
-      votes:
-        one: "1 vote"
-        other: "{{count}} votes"
+      quizs_left:
+        one: "Vous avec 1 quiz restant, consultez <a href='{{path}}'>vos quizs</a>."
+        other: "Vous avez {{count}} quizs restant, consultez <a href='{{path}}'>vos quizs</a>."
+      quizs:
+        one: "1 quiz"
+        other: "{{count}} quizs"
     filters:
-      votes:
+      quizs:
         title: "Votes"

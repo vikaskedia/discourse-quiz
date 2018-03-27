@@ -1,22 +1,22 @@
 en:
   js:
     voting:
-      reached_limit: "You are out of votes, remove an existing vote!"
-      list_votes: "List your votes"
-      votes_nav_help: "topics with the most votes"
-      voted: "You voted on this topic"
-      allow_topic_voting: "Allow users to vote on topics in this category"
-      vote_title: "Vote"
-      vote_title_plural: "Votes"
-      voted_title: "Voted"
+      reached_limit: "You are out of quizs, remove an existing quiz!"
+      list_quizs: "List your quizs"
+      quizs_nav_help: "topics with the most quizs"
+      quizd: "You quizd on this topic"
+      allow_topic_voting: "Allow users to quiz on topics in this category"
+      quiz_title: "Vote"
+      quiz_title_plural: "Votes"
+      quizd_title: "Voted"
       voting_closed_title: "Closed"
       voting_limit: "Limit"
-      votes_left:
-        one: "You have 1 vote left, see <a href='{{path}}'>your votes</a>."
-        other: "You have {{count}} votes left, see <a href='{{path}}'>your votes</a>."
-      votes:
-        one: "1 vote"
-        other: "{{count}} votes"
+      quizs_left:
+        one: "You have 1 quiz left, see <a href='{{path}}'>your quizs</a>."
+        other: "You have {{count}} quizs left, see <a href='{{path}}'>your quizs</a>."
+      quizs:
+        one: "1 quiz"
+        other: "{{count}} quizs"
     filters:
-      votes:
+      quizs:
         title: "Votes"

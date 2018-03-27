@@ -9,15 +9,15 @@ ar:
   js:
     voting:
       reached_limit: "لم يعد بإمكانك التصويت الآن، الرجاء حذف تصويت"
-      list_votes: "قائمة تصويتاتك"
-      votes_nav_help: "المواضيع الأكثر تصويتا"
-      voted: "لقد صوّت على هذا الموضوع"
+      list_quizs: "قائمة تصويتاتك"
+      quizs_nav_help: "المواضيع الأكثر تصويتا"
+      quizd: "لقد صوّت على هذا الموضوع"
       allow_topic_voting: "السماح للمستخدمين بالتصويت على المواضيع في هاته الفئة"
-      vote_title: "صوّت"
-      vote_title_plural: "التصويتات"
-      voted_title: "تم التصويت"
+      quiz_title: "صوّت"
+      quiz_title_plural: "التصويتات"
+      quizd_title: "تم التصويت"
       voting_closed_title: "مغلق"
       voting_limit: "الحد"
     filters:
-      votes:
+      quizs:
         title: "أصوات"

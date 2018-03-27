@@ -3,13 +3,13 @@ import { h } from 'virtual-dom';
 import { ajax } from 'discourse/lib/ajax';
 
 
-export default createWidget('vote-count', {
-  tagName: 'div.vote-count-wrapper',
-  buildKey: () => 'vote-count',
+export default createWidget('quiz-count', {
+  tagName: 'div.quiz-count-wrapper',
+  buildKey: () => 'quiz-count',
 
   buildClasses() {
-    if (this.attrs.vote_count === 0){
-      return "no-votes";
+    if (this.attrs.quiz_count === 0){
+      return "no-quizs";
     }
   },
 
@@ -18,35 +18,35 @@ export default createWidget('vote-count', {
   },
 
   html(attrs){
-    let voteCount = h('div.vote-count', attrs.vote_count.toString());
+    let quizCount = h('div.quiz-count', attrs.quiz_count.toString());
     let whoVoted = null;
-    if (this.siteSettings.voting_show_who_voted && this.state.whoVotedUsers && this.state.whoVotedUsers.length > 0) {
+    if (this.siteSettings.voting_show_who_quizd && this.state.whoVotedUsers && this.state.whoVotedUsers.length > 0) {
       whoVoted = this.attach('small-user-list', {
         users: this.state.whoVotedUsers,
         addSelf: attrs.liked,
-        listClassName: 'regular-votes',
+        listClassName: 'regular-quizs',
       });
     }
 
-    let buffer = [voteCount];
+    let buffer = [quizCount];
     if (whoVoted) {
-      buffer.push(h('div.who-voted.popup-menu.voting-popup-menu', [whoVoted]));
+      buffer.push(h('div.who-quizd.popup-menu.voting-popup-menu', [whoVoted]));
     }
     return buffer;
   },
 
   click(){
-    if (this.siteSettings.voting_show_who_voted && this.attrs.vote_count > 0) {
+    if (this.siteSettings.voting_show_who_quizd && this.attrs.quiz_count > 0) {
       if (this.state.whoVotedUsers === null) {
         return this.getWhoVoted();
       } else {
-        $(".who-voted").toggle();
+        $(".who-quizd").toggle();
       }
     }
   },
 
   clickOutside(){
-    $(".who-voted").hide();
+    $(".who-quizd").hide();
   },
 
   getWhoVoted() {

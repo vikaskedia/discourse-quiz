@@ -9,21 +9,21 @@ it:
   js:
     voting:
       reached_limit: "Hai terminato i voti, rimuovi un voto esistente!"
-      list_votes: "Elenca i tuoi voti"
-      votes_nav_help: "argomenti con il maggior numero di voti"
-      voted: "Hai votato su questo argomento"
+      list_quizs: "Elenca i tuoi voti"
+      quizs_nav_help: "argomenti con il maggior numero di voti"
+      quizd: "Hai votato su questo argomento"
       allow_topic_voting: "Permetti agli utenti di votare argomenti in questa categoria"
-      vote_title: "Vota"
-      vote_title_plural: "Voti"
-      voted_title: "Votato"
+      quiz_title: "Vota"
+      quiz_title_plural: "Voti"
+      quizd_title: "Votato"
       voting_closed_title: "Chiuso"
       voting_limit: "Limite"
-      votes_left:
+      quizs_left:
         one: "Ti resta 1 voto, guarda<a href='{{path}}'>i tuoi voti</a>."
         other: "Ti restano {{count}} voti, guarda<a href='{{path}}'>i tuoi voti</a>."
-      votes:
+      quizs:
         one: "1 voto"
         other: "{{count}} voti"
     filters:
-      votes:
+      quizs:
         title: "Voti"

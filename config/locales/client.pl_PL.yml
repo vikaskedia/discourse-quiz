@@ -9,25 +9,25 @@ pl_PL:
   js:
     voting:
       reached_limit: "Oddałeś już maksymalną liczbę głosów!"
-      list_votes: "Lista twoich głosów"
-      votes_nav_help: "tematy z największą liczbą głosów"
-      voted: "Oddałeś już głos"
+      list_quizs: "Lista twoich głosów"
+      quizs_nav_help: "tematy z największą liczbą głosów"
+      quizd: "Oddałeś już głos"
       allow_topic_voting: "Pozwól użytkownikom głosować na tematy w tej kategorii"
-      vote_title: "Głosuj"
-      vote_title_plural: "Głosuj"
-      voted_title: "Głosów"
+      quiz_title: "Głosuj"
+      quiz_title_plural: "Głosuj"
+      quizd_title: "Głosów"
       voting_closed_title: "Zamknięto"
       voting_limit: "Limit"
-      votes_left:
+      quizs_left:
         one: "Pozostał Ci 1 głos, zobacz <a href='{{path}}'>swoje głosy</a>."
         few: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
         many: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
         other: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
-      votes:
+      quizs:
         one: "1 głos"
         few: "{{count}} głosy"
         many: "{{count}} głosów"
         other: "{{count}} głosów"
     filters:
-      votes:
+      quizs:
         title: "Głosy"

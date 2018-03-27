@@ -1,8 +1,8 @@
-{{#if model.can_vote}}
+{{#if model.can_quiz}}
   {{#if model.postStream.loaded}}
     {{#if model.postStream.firstPostPresent}}
       <div class="voting title-voting">
-        {{mount-widget widget="vote-box" args=model}}
+        {{mount-widget widget="quiz-box" args=model}}
       </div>
     {{/if}}
   {{/if}}

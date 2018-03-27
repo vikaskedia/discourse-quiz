@@ -1,5 +1,5 @@
 # name: discourse-voting
-# about: Adds the ability to vote on features in a specified category.
+# about: Adds the ability to quiz on features in a specified category.
 # version: 0.4
 # author: Joe Buhlig joebuhlig.com, Sam Saffron
 # url: https://www.github.com/joebuhlig/discourse-feature-voting
@@ -10,22 +10,22 @@ register_asset "stylesheets/mobile/feature-voting.scss", :mobile
 
 enabled_site_setting :voting_enabled
 
-Discourse.top_menu_items.push(:votes)
-Discourse.anonymous_top_menu_items.push(:votes)
-Discourse.filters.push(:votes)
-Discourse.anonymous_filters.push(:votes)
+Discourse.top_menu_items.push(:quizs)
+Discourse.anonymous_top_menu_items.push(:quizs)
+Discourse.filters.push(:quizs)
+Discourse.anonymous_filters.push(:quizs)
 
 after_initialize do
 
   require_dependency 'basic_category_serializer'
   class ::BasicCategorySerializer
-    attributes :can_vote
+    attributes :can_quiz
 
-    def include_can_vote?
-      Category.can_vote?(object.id)
+    def include_can_quiz?
+      Category.can_quiz?(object.id)
     end
 
-    def can_vote
+    def can_quiz
       true
     end
 
@@ -33,32 +33,32 @@ after_initialize do
 
   require_dependency 'post_serializer'
   class ::PostSerializer
-    attributes :can_vote
+    attributes :can_quiz
 
-    def include_can_vote?
-      object.post_number == 1 && object.topic && object.topic.can_vote?
+    def include_can_quiz?
+      object.post_number == 1 && object.topic && object.topic.can_quiz?
     end
 
-    def can_vote
+    def can_quiz
       true
     end
   end
 
   require_dependency 'topic_view_serializer'
   class ::TopicViewSerializer
-    attributes :can_vote, :vote_count, :user_voted
+    attributes :can_quiz, :quiz_count, :user_quizd
 
-    def can_vote
-      object.topic.can_vote?
+    def can_quiz
+      object.topic.can_quiz?
     end
 
-    def vote_count
-      object.topic.vote_count
+    def quiz_count
+      object.topic.quiz_count
     end
 
-    def user_voted
+    def user_quizd
       if scope.user
-        object.topic.user_voted(scope.user)
+        object.topic.user_quizd(scope.user)
       else
         false
       end
@@ -66,10 +66,10 @@ after_initialize do
 
   end
 
-  add_to_serializer(:topic_list_item, :vote_count) { object.vote_count }
-  add_to_serializer(:topic_list_item, :can_vote) { object.can_vote? }
-  add_to_serializer(:topic_list_item, :user_voted) {
-    object.user_voted(scope.user) if scope.user
+  add_to_serializer(:topic_list_item, :quiz_count) { object.quiz_count }
+  add_to_serializer(:topic_list_item, :can_quiz) { object.can_quiz? }
+  add_to_serializer(:topic_list_item, :user_quizd) {
+    object.user_quizd(scope.user) if scope.user
   }
 
   class ::Category
@@ -86,7 +86,7 @@ after_initialize do
 
       @allowed_voting_cache = DistributedCache.new("allowed_voting")
 
-      def self.can_vote?(category_id)
+      def self.can_quiz?(category_id)
         return false unless SiteSetting.voting_enabled
 
         unless set = @allowed_voting_cache["allowed"]
@@ -107,55 +107,55 @@ after_initialize do
 
   require_dependency 'user'
   class ::User
-      def vote_count
-        if self.custom_fields["votes"]
-          user_votes = self.custom_fields["votes"]
-          user_votes.length - 1
+      def quiz_count
+        if self.custom_fields["quizs"]
+          user_quizs = self.custom_fields["quizs"]
+          user_quizs.length - 1
         else
           0
         end
       end
 
-      def alert_low_votes?
-        (vote_limit - vote_count) <= SiteSetting.voting_alert_votes_left
+      def alert_low_quizs?
+        (quiz_limit - quiz_count) <= SiteSetting.voting_alert_quizs_left
       end
 
-      def votes
-        if self.custom_fields["votes"]
-          self.custom_fields["votes"]
+      def quizs
+        if self.custom_fields["quizs"]
+          self.custom_fields["quizs"]
         else
           [nil]
         end
       end
 
-      def votes_archive
-        if self.custom_fields["votes_archive"]
-          return self.custom_fields["votes_archive"]
+      def quizs_archive
+        if self.custom_fields["quizs_archive"]
+          return self.custom_fields["quizs_archive"]
         else
           return [nil]
         end
       end
 
       def reached_voting_limit?
-        vote_count >= vote_limit
+        quiz_count >= quiz_limit
       end
 
-      def vote_limit
-        SiteSetting.send("voting_tl#{self.trust_level}_vote_limit")
+      def quiz_limit
+        SiteSetting.send("voting_tl#{self.trust_level}_quiz_limit")
       end
 
   end
 
   require_dependency 'current_user_serializer'
   class ::CurrentUserSerializer
-    attributes :votes_exceeded,  :vote_count
+    attributes :quizs_exceeded,  :quiz_count
 
-    def votes_exceeded
+    def quizs_exceeded
       object.reached_voting_limit?
     end
 
-    def vote_count
-      object.vote_count
+    def quiz_count
+      object.quiz_count
     end
 
   end
@@ -163,21 +163,21 @@ after_initialize do
   require_dependency 'topic'
   class ::Topic
 
-    def can_vote?
-      SiteSetting.voting_enabled && Category.can_vote?(category_id) && category.topic_id != id
+    def can_quiz?
+      SiteSetting.voting_enabled && Category.can_quiz?(category_id) && category.topic_id != id
     end
 
-    def vote_count
-      if self.custom_fields["vote_count"]
-        self.custom_fields["vote_count"].to_i
+    def quiz_count
+      if self.custom_fields["quiz_count"]
+        self.custom_fields["quiz_count"].to_i
       else
-        0 if self.can_vote?
+        0 if self.can_quiz?
       end
     end
 
-    def user_voted(user)
-      if user && user.custom_fields["votes"]
-        user.custom_fields["votes"].include? self.id.to_s
+    def user_quizd(user)
+      if user && user.custom_fields["quizs"]
+        user.custom_fields["quizs"].include? self.id.to_s
       else
         false
       end
@@ -187,13 +187,13 @@ after_initialize do
 
   require_dependency 'list_controller'
   class ::ListController
-    def voted_by
-      unless SiteSetting.voting_show_votes_on_profile
+    def quizd_by
+      unless SiteSetting.voting_show_quizs_on_profile
         render nothing: true, status: 404
       end
       list_opts = build_topic_list_options
       target_user = fetch_user_from_params(include_inactive: current_user.try(:staff?))
-      list = generate_list_for("voted_by", target_user, list_opts)
+      list = generate_list_for("quizd_by", target_user, list_opts)
       list.more_topics_url = url_for(construct_url_with(:next, list_opts))
       list.prev_topics_url = url_for(construct_url_with(:prev, list_opts))
       respond_with_list(list)
@@ -202,17 +202,17 @@ after_initialize do
 
   require_dependency 'topic_query'
   class ::TopicQuery
-    SORTABLE_MAPPING["votes"] = "custom_fields.vote_count"
+    SORTABLE_MAPPING["quizs"] = "custom_fields.quiz_count"
 
-    def list_voted_by(user)
+    def list_quizd_by(user)
       create_list(:user_topics) do |topics|
-        topics.where(id: user.custom_fields["votes"])
+        topics.where(id: user.custom_fields["quizs"])
       end
     end
 
-    def list_votes
-      create_list(:votes, unordered: true) do |topics|
-        topics.joins("left join topic_custom_fields tfv ON tfv.topic_id = topics.id AND tfv.name = 'vote_count'")
+    def list_quizs
+      create_list(:quizs, unordered: true) do |topics|
+        topics.joins("left join topic_custom_fields tfv ON tfv.topic_id = topics.id AND tfv.name = 'quiz_count'")
               .order("coalesce(tfv.value,'0')::integer desc, topics.bumped_at desc")
       end
     end
@@ -224,10 +224,10 @@ after_initialize do
     class VoteRelease < Jobs::Base
       def execute(args)
         if Topic.find_by(id: args[:topic_id])
-          UserCustomField.where(name: "votes", value: args[:topic_id]).find_each do |user_field|
+          UserCustomField.where(name: "quizs", value: args[:topic_id]).find_each do |user_field|
             user = User.find(user_field.user_id)
-            user.custom_fields["votes"] = user.votes.dup - [args[:topic_id].to_s]
-            user.custom_fields["votes_archive"] = user.votes_archive.dup.push(args[:topic_id])
+            user.custom_fields["quizs"] = user.quizs.dup - [args[:topic_id].to_s]
+            user.custom_fields["quizs_archive"] = user.quizs_archive.dup.push(args[:topic_id])
             user.save
           end
         end
@@ -237,10 +237,10 @@ after_initialize do
     class VoteReclaim < Jobs::Base
       def execute(args)
         if Topic.find_by(id: args[:topic_id])
-          UserCustomField.where(name: "votes_archive", value: args[:topic_id]).find_each do |user_field|
+          UserCustomField.where(name: "quizs_archive", value: args[:topic_id]).find_each do |user_field|
             user = User.find(user_field.user_id)
-            user.custom_fields["votes"] = user.votes.dup.push(args[:topic_id])
-            user.custom_fields["votes_archive"] = user.votes_archive.dup - [args[:topic_id].to_s]
+            user.custom_fields["quizs"] = user.quizs.dup.push(args[:topic_id])
+            user.custom_fields["quizs_archive"] = user.quizs_archive.dup - [args[:topic_id].to_s]
             user.save
           end
         end
@@ -251,11 +251,11 @@ after_initialize do
 
   DiscourseEvent.on(:topic_status_updated) do |topic_id, status, enabled|
     if (status == 'closed' || status == 'autoclosed' || status == 'archived') && enabled == true
-      Jobs.enqueue(:vote_release, {topic_id: topic_id})
+      Jobs.enqueue(:quiz_release, {topic_id: topic_id})
     end
 
     if (status == 'closed' || status == 'autoclosed' || status == 'archived') && enabled == false
-      Jobs.enqueue(:vote_reclaim, {topic_id: topic_id})
+      Jobs.enqueue(:quiz_reclaim, {topic_id: topic_id})
     end
   end
 
@@ -265,20 +265,20 @@ after_initialize do
     end
   end
 
-  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_voting/votes_controller')
+  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_voting/quizs_controller')
 
   DiscourseVoting::Engine.routes.draw do
-    post 'vote' => 'votes#add'
-    post 'unvote' => 'votes#remove'
-    get 'who' => 'votes#who'
+    post 'quiz' => 'quizs#add'
+    post 'unquiz' => 'quizs#remove'
+    get 'who' => 'quizs#who'
   end
 
   Discourse::Application.routes.append do
     mount ::DiscourseVoting::Engine, at: "/voting"
     # USERNAME_ROUTE_FORMAT is deprecated but we may need to support it for older installs
     username_route_format = defined?(RouteFormat) ? RouteFormat.username : USERNAME_ROUTE_FORMAT
-    get "topics/voted-by/:username" => "list#voted_by", as: "voted_by", constraints: {username: username_route_format}
+    get "topics/quizd-by/:username" => "list#quizd_by", as: "quizd_by", constraints: {username: username_route_format}
   end
 
-  TopicList.preloaded_custom_fields << "vote_count" if TopicList.respond_to? :preloaded_custom_fields
+  TopicList.preloaded_custom_fields << "quiz_count" if TopicList.respond_to? :preloaded_custom_fields
 end

@@ -1,14 +1,14 @@
 import { createWidget } from 'discourse/widgets/widget';
 
-export default createWidget('remove-quiz', {
-  tagName: 'div.remove-quiz',
+export default createWidget('remove-vote', {
+  tagName: 'div.remove-vote',
 
   buildClasses() {
-    return 'quiz-option';
+    return 'vote-option';
   },
 
   html() {
-    return ["Remove quiz"];
+    return ["Remove vote"];
   },
 
   click(){

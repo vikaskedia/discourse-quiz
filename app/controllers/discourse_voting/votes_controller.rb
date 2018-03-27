@@ -7,37 +7,37 @@ module DiscourseVoting
       topic = Topic.find(params[:topic_id].to_i)
       guardian.ensure_can_see!(topic)
 
-      render json: MultiJson.dump(who_voted(topic))
+      render json: MultiJson.dump(who_quizd(topic))
     end
 
     def add
       topic = Topic.find_by(id: params["topic_id"])
 
-      raise Discourse::InvalidAccess if !topic.can_vote?
+      raise Discourse::InvalidAccess if !topic.can_quiz?
       guardian.ensure_can_see!(topic)
 
-      voted = false
+      quizd = false
 
       unless current_user.reached_voting_limit?
 
-        current_user.custom_fields["votes"] = current_user.votes.dup.push(params["topic_id"])
+        current_user.custom_fields["quizs"] = current_user.quizs.dup.push(params["topic_id"])
         current_user.save
 
-        update_vote_count(topic)
+        update_quiz_count(topic)
 
-        voted = true
+        quizd = true
       end
 
       obj = {
-        can_vote: !current_user.reached_voting_limit?,
-        vote_limit: current_user.vote_limit,
-        vote_count: topic.custom_fields["vote_count"].to_i,
-        who_voted: who_voted(topic),
-        alert:  current_user.alert_low_votes?,
-        votes_left: [(current_user.vote_limit - current_user.vote_count), 0].max
+        can_quiz: !current_user.reached_voting_limit?,
+        quiz_limit: current_user.quiz_limit,
+        quiz_count: topic.custom_fields["quiz_count"].to_i,
+        who_quizd: who_quizd(topic),
+        alert:  current_user.alert_low_quizs?,
+        quizs_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
       }
 
-      render json: obj, status: voted ? 200 : 403
+      render json: obj, status: quizd ? 200 : 403
     end
 
     def remove
@@ -45,17 +45,17 @@ module DiscourseVoting
 
       guardian.ensure_can_see!(topic)
 
-      current_user.custom_fields["votes"] = current_user.votes.dup - [params["topic_id"].to_s]
+      current_user.custom_fields["quizs"] = current_user.quizs.dup - [params["topic_id"].to_s]
       current_user.save
 
-      update_vote_count(topic)
+      update_quiz_count(topic)
 
       obj = {
-        can_vote: !current_user.reached_voting_limit?,
-        vote_limit: current_user.vote_limit,
-        vote_count: topic.custom_fields["vote_count"].to_i,
-        who_voted: who_voted(topic),
-        votes_left: [(current_user.vote_limit - current_user.vote_count), 0].max
+        can_quiz: !current_user.reached_voting_limit?,
+        quiz_limit: current_user.quiz_limit,
+        quiz_count: topic.custom_fields["quiz_count"].to_i,
+        who_quizd: who_quizd(topic),
+        quizs_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
       }
 
       render json: obj
@@ -63,16 +63,16 @@ module DiscourseVoting
 
     protected
 
-    def update_vote_count(topic)
-      topic.custom_fields["vote_count"] = UserCustomField.where(value: topic.id.to_s, name: 'votes').count
+    def update_quiz_count(topic)
+      topic.custom_fields["quiz_count"] = UserCustomField.where(value: topic.id.to_s, name: 'quizs').count
       topic.save
     end
 
-    def who_voted(topic)
-      return nil unless SiteSetting.voting_show_who_voted
+    def who_quizd(topic)
+      return nil unless SiteSetting.voting_show_who_quizd
 
       users = User.where("id in (
-        SELECT user_id FROM user_custom_fields WHERE name IN ('votes', 'votes_archive') AND value = ?
+        SELECT user_id FROM user_custom_fields WHERE name IN ('quizs', 'quizs_archive') AND value = ?
       )", params[:topic_id].to_i.to_s)
 
       ActiveModel::ArraySerializer.new(users, scope: guardian, each_serializer: BasicUserSerializer)

@@ -1,22 +1,22 @@
 plugins:
-  voting_alert_votes_left:
+  voting_alert_quizs_left:
     default: 10
   voting_enabled:
     default: true
     client: true
-  voting_show_who_voted:
+  voting_show_who_quizd:
     default: true
     client: true
-  voting_show_votes_on_profile:
+  voting_show_quizs_on_profile:
     default: true
     client: true
-  voting_tl0_vote_limit:
+  voting_tl0_quiz_limit:
     default: 2
-  voting_tl1_vote_limit:
+  voting_tl1_quiz_limit:
     default: 4
-  voting_tl2_vote_limit:
+  voting_tl2_quiz_limit:
     default: 6
-  voting_tl3_vote_limit:
+  voting_tl3_quiz_limit:
     default: 8
-  voting_tl4_vote_limit:
+  voting_tl4_quiz_limit:
     default: 10

@@ -8,11 +8,11 @@
 tr_TR:
   js:
     voting:
-      vote_title: "Oyla"
-      vote_title_plural: "Oylar"
-      voted_title: "Oylanmış"
+      quiz_title: "Oyla"
+      quiz_title_plural: "Oylar"
+      quizd_title: "Oylanmış"
       voting_closed_title: "Kapalı"
       voting_limit: "Sınır"
     filters:
-      votes:
+      quizs:
         title: "Oylar"

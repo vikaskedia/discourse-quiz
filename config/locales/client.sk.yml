@@ -8,8 +8,8 @@
 sk:
   js:
     voting:
-      vote_title: "Hlas"
-      vote_title_plural: "Hlasy"
-      voted_title: "Odhlasované"
+      quiz_title: "Hlas"
+      quiz_title_plural: "Hlasy"
+      quizd_title: "Odhlasované"
       voting_closed_title: "Hlasovanie ukončené"
       voting_limit: "Limit"

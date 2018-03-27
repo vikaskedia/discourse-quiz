@@ -7,12 +7,12 @@
 
 fr:
   site_settings:
-    voting_enabled: 'Autoriser les utilisateurs à voter pour les sujets ?'
-    voting_tl0_vote_limit: 'A combien de votes ont droit les utilisateurs de niveau de confiance 0 ?'
-    voting_tl1_vote_limit: 'A combien de votes ont droit les utilisateurs de niveau de confiance 1 ?'
-    voting_tl2_vote_limit: 'A combien de votes ont droit les utilisateurs de niveau de confiance 2 ?'
-    voting_tl3_vote_limit: 'A combien de votes ont droit les utilisateurs de niveau de confiance 3 ?'
-    voting_tl4_vote_limit: 'A combien de votes ont droit les utilisateurs de niveau de confiance 4 ?'
-    voting_show_who_voted: 'Permettre aux utilisateurs de voir qui a voté ?'
-    voting_show_votes_on_profile: 'Permettre aux utilisateurs de voir leurs votes dans leur historique d''activité ?'
-    voting_alert_votes_left: 'Avertir les utilisateurs quand il leur reste ce nombre de votes ?'
+    voting_enabled: 'Autoriser les utilisateurs à quizr pour les sujets ?'
+    voting_tl0_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 0 ?'
+    voting_tl1_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 1 ?'
+    voting_tl2_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 2 ?'
+    voting_tl3_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 3 ?'
+    voting_tl4_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 4 ?'
+    voting_show_who_quizd: 'Permettre aux utilisateurs de voir qui a voté ?'
+    voting_show_quizs_on_profile: 'Permettre aux utilisateurs de voir leurs quizs dans leur historique d''activité ?'
+    voting_alert_quizs_left: 'Avertir les utilisateurs quand il leur reste ce nombre de quizs ?'

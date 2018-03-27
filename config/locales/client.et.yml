@@ -8,8 +8,8 @@
 et:
   js:
     voting:
-      voted: "Sa hindasid seda teemat"
-      vote_title: "Hinda"
-      vote_title_plural: "HInnangud"
+      quizd: "Sa hindasid seda teemat"
+      quiz_title: "Hinda"
+      quiz_title_plural: "HInnangud"
       voting_closed_title: "Suletud"
       voting_limit: "Limiit"

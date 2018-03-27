@@ -1,8 +1,8 @@
 import { createWidget } from 'discourse/widgets/widget';
 import showModal from 'discourse/lib/show-modal';
 
-export default createWidget('vote-button', {
-  tagName: 'div.vote-button',
+export default createWidget('quiz-button', {
+  tagName: 'div.quiz-button',
 
   buildClasses(attrs) {
     var buttonClass = "";
@@ -10,26 +10,26 @@ export default createWidget('vote-button', {
       buttonClass = "voting-closed";
     }
     else{
-      if (!attrs.user_voted){
-        buttonClass = "nonvote";
+      if (!attrs.user_quizd){
+        buttonClass = "nonquiz";
       }
       else{
-        if (this.currentUser && this.currentUser.votes_exceeded){
-          buttonClass = "vote-limited nonvote";
+        if (this.currentUser && this.currentUser.quizs_exceeded){
+          buttonClass = "quiz-limited nonquiz";
         }
         else{
-          buttonClass = "vote";
+          buttonClass = "quiz";
         }
       }
     }
-    if (this.siteSettings.voting_show_who_voted) {
+    if (this.siteSettings.voting_show_who_quizd) {
       buttonClass += ' show-pointer';
     }
     return buttonClass;
   },
 
   html(attrs){
-    var buttonTitle = I18n.t('voting.vote_title');
+    var buttonTitle = I18n.t('voting.quiz_title');
     if (!this.currentUser){
       buttonTitle = I18n.t('log_in');
     }
@@ -38,15 +38,15 @@ export default createWidget('vote-button', {
         buttonTitle = I18n.t('voting.voting_closed_title');
       }
       else{
-        if (attrs.user_voted){
-          buttonTitle = I18n.t('voting.voted_title');
+        if (attrs.user_quizd){
+          buttonTitle = I18n.t('voting.quizd_title');
         }
         else{
-          if (this.currentUser && this.currentUser.votes_exceeded){
+          if (this.currentUser && this.currentUser.quizs_exceeded){
             buttonTitle = I18n.t('voting.voting_limit');
           }
           else{
-            buttonTitle = I18n.t('voting.vote_title');
+            buttonTitle = I18n.t('voting.quiz_title');
           }
         }
       }
@@ -58,18 +58,18 @@ export default createWidget('vote-button', {
     if (!this.currentUser){
       showModal('login');
     }
-    if (!this.attrs.closed && this.parentWidget.state.allowClick && !this.attrs.user_voted){
+    if (!this.attrs.closed && this.parentWidget.state.allowClick && !this.attrs.user_quizd){
       this.parentWidget.state.allowClick = false;
       this.parentWidget.state.initialVote = true;
       this.sendWidgetAction('addVote');
     }
-    if (this.attrs.user_voted || this.currentUser.votes_exceeded) {
-      $(".vote-options").toggle();
+    if (this.attrs.user_quizd || this.currentUser.quizs_exceeded) {
+      $(".quiz-options").toggle();
     }
   },
 
   clickOutside(){
-    $(".vote-options").hide();
+    $(".quiz-options").hide();
     this.parentWidget.state.initialVote = false;
   }
 });
