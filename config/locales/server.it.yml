@@ -14,5 +14,5 @@ it:
     quizzing_tl3_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 3?'
     quizzing_tl4_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 4?'
     quizzing_show_who_quizd: 'Consentire agli utenti di vedere chi ha votato?'
-    quizzing_show_quizs_on_profile: 'Consentire agli utenti di vedere i propri voti nelle attività del profilo?'
-    quizzing_alert_quizs_left: 'Avverti l''utente quando mancan questo numero di voti'
+    quizzing_show_quizzes_on_profile: 'Consentire agli utenti di vedere i propri voti nelle attività del profilo?'
+    quizzing_alert_quizzes_left: 'Avverti l''utente quando mancan questo numero di voti'

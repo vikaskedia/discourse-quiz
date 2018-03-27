@@ -9,8 +9,8 @@ ar:
   js:
     quizzing:
       reached_limit: "لم يعد بإمكانك التصويت الآن، الرجاء حذف تصويت"
-      list_quizs: "قائمة تصويتاتك"
-      quizs_nav_help: "المواضيع الأكثر تصويتا"
+      list_quizzes: "قائمة تصويتاتك"
+      quizzes_nav_help: "المواضيع الأكثر تصويتا"
       quizd: "لقد صوّت على هذا الموضوع"
       allow_topic_quizzing: "السماح للمستخدمين بالتصويت على المواضيع في هاته الفئة"
       quiz_title: "صوّت"
@@ -19,5 +19,5 @@ ar:
       quizzing_closed_title: "مغلق"
       quizzing_limit: "الحد"
     filters:
-      quizs:
+      quizzes:
         title: "أصوات"

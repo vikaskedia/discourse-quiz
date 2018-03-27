@@ -9,8 +9,8 @@ de:
   js:
     quizzing:
       reached_limit: "Dir sind die Votes ausgegangen, entferne einen vorhandenen Vote!"
-      list_quizs: "Deine Votes auflisten"
-      quizs_nav_help: "Themen mit den meisten Votes"
+      list_quizzes: "Deine Votes auflisten"
+      quizzes_nav_help: "Themen mit den meisten Votes"
       quizd: "Du hast für dieses Thema gequizt"
       allow_topic_quizzing: "Benutzern erlauben, für Themen in dieser Kategorie zu quizn"
       quiz_title: "Vote"
@@ -18,12 +18,12 @@ de:
       quizd_title: "Voted"
       quizzing_closed_title: "Geschlossen"
       quizzing_limit: "Limit"
-      quizs_left:
+      quizzes_left:
         one: "Du hast 1 Vote übrig, siehe <a href='{{path}}'>deine Votes</a>."
         other: "Dir bleiben {{count}} Votes, siehe <a href='{{path}}'>deine Votes</a>."
-      quizs:
+      quizzes:
         one: "1 Vote"
         other: "{{count}} Votes"
     filters:
-      quizs:
+      quizzes:
         title: "Votes"

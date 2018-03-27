@@ -14,5 +14,5 @@ cs:
     quizzing_tl3_quiz_limit: 'Kolik aktivních hlasů povolit TL3 uživatelům?'
     quizzing_tl4_quiz_limit: 'Kolik aktivních hlasů povolit TL4 uživatelům?'
     quizzing_show_who_quizd: 'Povolit uživatelům zobrazit, kdo jak hlasoval?'
-    quizzing_show_quizs_on_profile: 'Povolit uživatelům zobrazit jejich hlasování ve feedu aktivit?'
-    quizzing_alert_quizs_left: 'Upozornit uživatele, když mu zbývá tolik hlasů'
+    quizzing_show_quizzes_on_profile: 'Povolit uživatelům zobrazit jejich hlasování ve feedu aktivit?'
+    quizzing_alert_quizzes_left: 'Upozornit uživatele, když mu zbývá tolik hlasů'

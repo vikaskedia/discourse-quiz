@@ -20,7 +20,7 @@ module DiscourseVoting
 
       unless current_user.reached_quizzing_limit?
 
-        current_user.custom_fields["quizs"] = current_user.quizs.dup.push(params["topic_id"])
+        current_user.custom_fields["quizzes"] = current_user.quizzes.dup.push(params["topic_id"])
         current_user.save
 
         update_quiz_count(topic)
@@ -33,8 +33,8 @@ module DiscourseVoting
         quiz_limit: current_user.quiz_limit,
         quiz_count: topic.custom_fields["quiz_count"].to_i,
         who_quizd: who_quizd(topic),
-        alert:  current_user.alert_low_quizs?,
-        quizs_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
+        alert:  current_user.alert_low_quizzes?,
+        quizzes_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
       }
 
       render json: obj, status: quizd ? 200 : 403
@@ -45,7 +45,7 @@ module DiscourseVoting
 
       guardian.ensure_can_see!(topic)
 
-      current_user.custom_fields["quizs"] = current_user.quizs.dup - [params["topic_id"].to_s]
+      current_user.custom_fields["quizzes"] = current_user.quizzes.dup - [params["topic_id"].to_s]
       current_user.save
 
       update_quiz_count(topic)
@@ -55,7 +55,7 @@ module DiscourseVoting
         quiz_limit: current_user.quiz_limit,
         quiz_count: topic.custom_fields["quiz_count"].to_i,
         who_quizd: who_quizd(topic),
-        quizs_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
+        quizzes_left: [(current_user.quiz_limit - current_user.quiz_count), 0].max
       }
 
       render json: obj
@@ -64,7 +64,7 @@ module DiscourseVoting
     protected
 
     def update_quiz_count(topic)
-      topic.custom_fields["quiz_count"] = UserCustomField.where(value: topic.id.to_s, name: 'quizs').count
+      topic.custom_fields["quiz_count"] = UserCustomField.where(value: topic.id.to_s, name: 'quizzes').count
       topic.save
     end
 
@@ -72,7 +72,7 @@ module DiscourseVoting
       return nil unless SiteSetting.quizzing_show_who_quizd
 
       users = User.where("id in (
-        SELECT user_id FROM user_custom_fields WHERE name IN ('quizs', 'quizs_archive') AND value = ?
+        SELECT user_id FROM user_custom_fields WHERE name IN ('quizzes', 'quizzes_archive') AND value = ?
       )", params[:topic_id].to_i.to_s)
 
       ActiveModel::ArraySerializer.new(users, scope: guardian, each_serializer: BasicUserSerializer)

@@ -15,5 +15,5 @@ nl:
       quizzing_closed_title: "Gesloten"
       quizzing_limit: "Limiet"
     filters:
-      quizs:
+      quizzes:
         title: "Stemmen"

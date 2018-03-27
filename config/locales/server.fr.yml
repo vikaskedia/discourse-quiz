@@ -8,11 +8,11 @@
 fr:
   site_settings:
     quizzing_enabled: 'Autoriser les utilisateurs à quizr pour les sujets ?'
-    quizzing_tl0_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 0 ?'
-    quizzing_tl1_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 1 ?'
-    quizzing_tl2_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 2 ?'
-    quizzing_tl3_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 3 ?'
-    quizzing_tl4_quiz_limit: 'A combien de quizs ont droit les utilisateurs de niveau de confiance 4 ?'
+    quizzing_tl0_quiz_limit: 'A combien de quizzes ont droit les utilisateurs de niveau de confiance 0 ?'
+    quizzing_tl1_quiz_limit: 'A combien de quizzes ont droit les utilisateurs de niveau de confiance 1 ?'
+    quizzing_tl2_quiz_limit: 'A combien de quizzes ont droit les utilisateurs de niveau de confiance 2 ?'
+    quizzing_tl3_quiz_limit: 'A combien de quizzes ont droit les utilisateurs de niveau de confiance 3 ?'
+    quizzing_tl4_quiz_limit: 'A combien de quizzes ont droit les utilisateurs de niveau de confiance 4 ?'
     quizzing_show_who_quizd: 'Permettre aux utilisateurs de voir qui a voté ?'
-    quizzing_show_quizs_on_profile: 'Permettre aux utilisateurs de voir leurs quizs dans leur historique d''activité ?'
-    quizzing_alert_quizs_left: 'Avertir les utilisateurs quand il leur reste ce nombre de quizs ?'
+    quizzing_show_quizzes_on_profile: 'Permettre aux utilisateurs de voir leurs quizzes dans leur historique d''activité ?'
+    quizzing_alert_quizzes_left: 'Avertir les utilisateurs quand il leur reste ce nombre de quizzes ?'

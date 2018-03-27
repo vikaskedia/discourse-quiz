@@ -14,5 +14,5 @@ tr_TR:
       quizzing_closed_title: "Kapalı"
       quizzing_limit: "Sınır"
     filters:
-      quizs:
+      quizzes:
         title: "Oylar"

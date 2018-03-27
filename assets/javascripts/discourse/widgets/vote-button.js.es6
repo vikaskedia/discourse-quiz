@@ -14,7 +14,7 @@ export default createWidget('quiz-button', {
         buttonClass = "nonquiz";
       }
       else{
-        if (this.currentUser && this.currentUser.quizs_exceeded){
+        if (this.currentUser && this.currentUser.quizzes_exceeded){
           buttonClass = "quiz-limited nonquiz";
         }
         else{
@@ -42,7 +42,7 @@ export default createWidget('quiz-button', {
           buttonTitle = I18n.t('quizzing.quizd_title');
         }
         else{
-          if (this.currentUser && this.currentUser.quizs_exceeded){
+          if (this.currentUser && this.currentUser.quizzes_exceeded){
             buttonTitle = I18n.t('quizzing.quizzing_limit');
           }
           else{
@@ -63,7 +63,7 @@ export default createWidget('quiz-button', {
       this.parentWidget.state.initialVote = true;
       this.sendWidgetAction('addVote');
     }
-    if (this.attrs.user_quizd || this.currentUser.quizs_exceeded) {
+    if (this.attrs.user_quizd || this.currentUser.quizzes_exceeded) {
       $(".quiz-options").toggle();
     }
   },

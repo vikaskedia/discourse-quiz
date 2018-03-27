@@ -14,5 +14,5 @@ es:
     quizzing_tl3_quiz_limit: '¿Cuántos votos activos se permiten para usuarios con NC3?'
     quizzing_tl4_quiz_limit: '¿Cuántos votos activos se permiten para usuarios con NC4?'
     quizzing_show_who_quizd: '¿Pueden los usuarios ver quién votó?'
-    quizzing_show_quizs_on_profile: '¿Permitir a los usuarios ver sus votos en su activity feed?'
-    quizzing_alert_quizs_left: 'Alertar al usuario cuando quedan muchos votos'
+    quizzing_show_quizzes_on_profile: '¿Permitir a los usuarios ver sus votos en su activity feed?'
+    quizzing_alert_quizzes_left: 'Alertar al usuario cuando quedan muchos votos'

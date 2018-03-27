@@ -1,9 +1,9 @@
 en:
   js:
     quizzing:
-      reached_limit: "You are out of quizs, remove an existing quiz!"
-      list_quizs: "List your quizs"
-      quizs_nav_help: "topics with the most quizs"
+      reached_limit: "You are out of quizzes, remove an existing quiz!"
+      list_quizzes: "List your quizzes"
+      quizzes_nav_help: "topics with the most quizzes"
       quizd: "You quizd on this topic"
       allow_topic_quizzing: "Allow users to quiz on topics in this category"
       quiz_title: "Vote"
@@ -11,12 +11,12 @@ en:
       quizd_title: "Voted"
       quizzing_closed_title: "Closed"
       quizzing_limit: "Limit"
-      quizs_left:
-        one: "You have 1 quiz left, see <a href='{{path}}'>your quizs</a>."
-        other: "You have {{count}} quizs left, see <a href='{{path}}'>your quizs</a>."
-      quizs:
+      quizzes_left:
+        one: "You have 1 quiz left, see <a href='{{path}}'>your quizzes</a>."
+        other: "You have {{count}} quizzes left, see <a href='{{path}}'>your quizzes</a>."
+      quizzes:
         one: "1 quiz"
-        other: "{{count}} quizs"
+        other: "{{count}} quizzes"
     filters:
-      quizs:
+      quizzes:
         title: "Votes"

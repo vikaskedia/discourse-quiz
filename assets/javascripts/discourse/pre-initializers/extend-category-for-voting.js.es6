@@ -22,7 +22,7 @@ function initialize(api) {
 
     let userVotedClass = topic.user_quizd ? " quizd" : "";
     buffer.push(`<a href='${topic.get('url')}' class='list-quiz-count discourse-tag${userVotedClass}'${title}>`);
-    buffer.push(I18n.t('quizzing.quizs', {count: topic.quiz_count}));
+    buffer.push(I18n.t('quizzing.quizzes', {count: topic.quiz_count}));
     if (topic.user_quizd) {
       buffer.push(`<i class='fa fa-star'></i>`);
     }
@@ -47,8 +47,8 @@ export default {
     Category.reopen({
 
       @computed("url")
-      quizsUrl(url) {
-        return `${url}/l/quizs`;
+      quizzesUrl(url) {
+        return `${url}/l/quizzes`;
       },
 
       @computed('custom_fields.enable_topic_quizzing')

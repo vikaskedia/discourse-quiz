@@ -14,5 +14,5 @@ pl_PL:
     quizzing_tl3_quiz_limit: 'Ile głosów mogą oddać użytkownicy TL3?'
     quizzing_tl4_quiz_limit: 'Ile głosów mogą oddać użytkownicy TL4?'
     quizzing_show_who_quizd: 'Czy użytkownicy mają widzieć, kto głosował?'
-    quizzing_show_quizs_on_profile: 'Czy głosy mają być widoczne w aktywności w proflu użytkownika?'
-    quizzing_alert_quizs_left: 'Ostrzeż użytkownika, jesli pozostało mu tyle głosów'
+    quizzing_show_quizzes_on_profile: 'Czy głosy mają być widoczne w aktywności w proflu użytkownika?'
+    quizzing_alert_quizzes_left: 'Ostrzeż użytkownika, jesli pozostało mu tyle głosów'

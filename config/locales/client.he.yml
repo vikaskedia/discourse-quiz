@@ -9,8 +9,8 @@ he:
   js:
     quizzing:
       reached_limit: "נגמרו לך ההצבעות, עליך להסיר הצבעה קיימת!"
-      list_quizs: "הצגת ההצבעות שלך"
-      quizs_nav_help: "נושאים עם הכי הרבה הצבעות"
+      list_quizzes: "הצגת ההצבעות שלך"
+      quizzes_nav_help: "נושאים עם הכי הרבה הצבעות"
       quizd: "הצבעת לנושא זה"
       allow_topic_quizzing: "לאפשר למשתמשים להצביע על נושאים בקטגוריה זו"
       quiz_title: "הצבעה"
@@ -18,12 +18,12 @@ he:
       quizd_title: "התקבלה הצבעה"
       quizzing_closed_title: "נסגר"
       quizzing_limit: "מגבלה"
-      quizs_left:
+      quizzes_left:
         one: "נותרה לך הצבעה אחת, הצגת <a href='{{path}}'>ההצבעות שלך</a>."
         other: "נותרו לך {{count}} הצבעות, להציג את <a href='{{path}}'>ההצבעות שלך</a>."
-      quizs:
+      quizzes:
         one: "הצבעה אחת"
         other: "{{count}} הצבעות"
     filters:
-      quizs:
+      quizzes:
         title: "הצבעות"

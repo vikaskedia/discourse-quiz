@@ -14,5 +14,5 @@ de:
     quizzing_tl3_quiz_limit: 'Wie viele aktive Votes sind TL3-Benutzern erlaubt?'
     quizzing_tl4_quiz_limit: 'Wie viele aktive Votes sind TL4-Benutzern erlaubt?'
     quizzing_show_who_quizd: 'Benutzern erlauben, zu sehen, wer gequizt hat?'
-    quizzing_show_quizs_on_profile: 'Benutzern erlauben, ihre Votes in ihrem Benutzerprofil einzusehen?'
-    quizzing_alert_quizs_left: 'Benutzer benachrichten, wenn diese Anzahl von Votes verblieben sind'
+    quizzing_show_quizzes_on_profile: 'Benutzern erlauben, ihre Votes in ihrem Benutzerprofil einzusehen?'
+    quizzing_alert_quizzes_left: 'Benutzer benachrichten, wenn diese Anzahl von Votes verblieben sind'

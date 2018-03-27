@@ -9,8 +9,8 @@ nb_NO:
   js:
     quizzing:
       reached_limit: "Du har ikke flere stemmer igjen, fjern en eksisterende stemme."
-      list_quizs: "List opp dine stemmer"
-      quizs_nav_help: "tråder med flest stemmer"
+      list_quizzes: "List opp dine stemmer"
+      quizzes_nav_help: "tråder med flest stemmer"
       quizd: "Du stemte på denne tråden"
       allow_topic_quizzing: "Tillat brukere å stemme på tråder i denne kategorien"
       quiz_title: "Stemme"
@@ -18,12 +18,12 @@ nb_NO:
       quizd_title: "Stemt"
       quizzing_closed_title: "Lukket"
       quizzing_limit: "Grense"
-      quizs_left:
+      quizzes_left:
         one: "Du har én stemme igjen, se <a href='{{path}}'>dine stemmer</a>."
         other: "Du har {{count}} stemmer igjen, se <a href='{{path}}'>dine stemmer</a>."
-      quizs:
+      quizzes:
         one: "Én stemme"
         other: "{{count}} stemmer"
     filters:
-      quizs:
+      quizzes:
         title: "Stemmer"

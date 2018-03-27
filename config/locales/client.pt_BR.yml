@@ -9,8 +9,8 @@ pt_BR:
   js:
     quizzing:
       reached_limit: "Você está sem votos, remova um voto existente!"
-      list_quizs: "Mostrar seus votos"
-      quizs_nav_help: "tópicos mais votados"
+      list_quizzes: "Mostrar seus votos"
+      quizzes_nav_help: "tópicos mais votados"
       quizd: "Você votou neste tópico"
       allow_topic_quizzing: "Permitir que usuários quizm em tópicos desta categoria"
       quiz_title: "Votar"
@@ -19,5 +19,5 @@ pt_BR:
       quizzing_closed_title: "Fechado"
       quizzing_limit: "Limite"
     filters:
-      quizs:
+      quizzes:
         title: "Votos"

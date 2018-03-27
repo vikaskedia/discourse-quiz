@@ -9,8 +9,8 @@ fi:
   js:
     quizzing:
       reached_limit: "Sinulla ei ole enempää ääniä, poista antamasi ääni!"
-      list_quizs: "Kaikki antamasi äänet"
-      quizs_nav_help: "ketjut, joilla on eniten ääniä"
+      list_quizzes: "Kaikki antamasi äänet"
+      quizzes_nav_help: "ketjut, joilla on eniten ääniä"
       quizd: "Äänestit tätä ketjua"
       allow_topic_quizzing: "Salli käyttäjien antaa ääniä ketjuille tällä alueella"
       quiz_title: "Ääni"
@@ -18,12 +18,12 @@ fi:
       quizd_title: "Äänestit"
       quizzing_closed_title: "Suljettu"
       quizzing_limit: "Yläraja"
-      quizs_left:
+      quizzes_left:
         one: "Sinulla on 1 ääni jäljellä, katso <a href='{{path}}'>kaikki äänesi</a>."
         other: "Sinulla on {{count}} ääntä jäljellä, katso <a href='{{path}}'>kaikki äänesi</a>."
-      quizs:
+      quizzes:
         one: "1 ääni"
         other: "{{count}} ääntä"
     filters:
-      quizs:
+      quizzes:
         title: "Äänet"

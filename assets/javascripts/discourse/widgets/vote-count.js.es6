@@ -9,7 +9,7 @@ export default createWidget('quiz-count', {
 
   buildClasses() {
     if (this.attrs.quiz_count === 0){
-      return "no-quizs";
+      return "no-quizzes";
     }
   },
 
@@ -24,7 +24,7 @@ export default createWidget('quiz-count', {
       whoVoted = this.attach('small-user-list', {
         users: this.state.whoVotedUsers,
         addSelf: attrs.liked,
-        listClassName: 'regular-quizs',
+        listClassName: 'regular-quizzes',
       });
     }
 

@@ -8,9 +8,9 @@
 fr:
   js:
     quizzing:
-      reached_limit: "Vous n'avez plus de quizs disponibles, enlevez-en un !"
-      list_quizs: "Lister vos quizs"
-      quizs_nav_help: "sujets les plus votés"
+      reached_limit: "Vous n'avez plus de quizzes disponibles, enlevez-en un !"
+      list_quizzes: "Lister vos quizzes"
+      quizzes_nav_help: "sujets les plus votés"
       quizd: "Vous avez voté pour ce sujet"
       allow_topic_quizzing: "Autoriser les utilisateurs à quizr dans cette catégorie"
       quiz_title: "Vote"
@@ -18,12 +18,12 @@ fr:
       quizd_title: "Voté"
       quizzing_closed_title: "Fermé"
       quizzing_limit: "Limite"
-      quizs_left:
-        one: "Vous avec 1 quiz restant, consultez <a href='{{path}}'>vos quizs</a>."
-        other: "Vous avez {{count}} quizs restant, consultez <a href='{{path}}'>vos quizs</a>."
-      quizs:
+      quizzes_left:
+        one: "Vous avec 1 quiz restant, consultez <a href='{{path}}'>vos quizzes</a>."
+        other: "Vous avez {{count}} quizzes restant, consultez <a href='{{path}}'>vos quizzes</a>."
+      quizzes:
         one: "1 quiz"
-        other: "{{count}} quizs"
+        other: "{{count}} quizzes"
     filters:
-      quizs:
+      quizzes:
         title: "Votes"

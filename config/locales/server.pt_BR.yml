@@ -14,5 +14,5 @@ pt_BR:
     quizzing_tl3_quiz_limit: 'Quantos votos de usuários de nível 3 são permitidos?'
     quizzing_tl4_quiz_limit: 'Quantos votos de usuários de nível 4 são permitidos?'
     quizzing_show_who_quizd: 'Permitir que usuários vejam quem votou?'
-    quizzing_show_quizs_on_profile: 'Permitir que usuários vejam seus votos nos seus feed de atividade?'
-    quizzing_alert_quizs_left: 'Alertar o usuário quando ele votar várias vezes?'
+    quizzing_show_quizzes_on_profile: 'Permitir que usuários vejam seus votos nos seus feed de atividade?'
+    quizzing_alert_quizzes_left: 'Alertar o usuário quando ele votar várias vezes?'

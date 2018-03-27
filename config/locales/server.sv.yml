@@ -14,5 +14,5 @@ sv:
     quizzing_tl3_quiz_limit: 'Hur många röster är tillgängliga för TL3 användare?'
     quizzing_tl4_quiz_limit: 'Hur många röster är tillgängliga för TL4 användare?'
     quizzing_show_who_quizd: 'Tillåt användare att se vem som har röstat? '
-    quizzing_show_quizs_on_profile: 'Tillåt användare att se sina quizringar i aktivitetsflödet?'
-    quizzing_alert_quizs_left: 'Uppmärksamma användaren när antal röster kvar är '
+    quizzing_show_quizzes_on_profile: 'Tillåt användare att se sina quizringar i aktivitetsflödet?'
+    quizzing_alert_quizzes_left: 'Uppmärksamma användaren när antal röster kvar är '

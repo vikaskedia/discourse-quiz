@@ -4,7 +4,7 @@ export default {
   },
   path(category){
     if (category) {
-      return category.get('quizsUrl');
+      return category.get('quizzesUrl');
     }
   },
   displayName() {
@@ -13,7 +13,7 @@ export default {
   setupComponent(args, component) {
     const filterMode = args.filterMode;
     // no endsWith in IE
-    if (filterMode && filterMode.indexOf("quizs", filterMode.length - 5) !== -1) {
+    if (filterMode && filterMode.indexOf("quizzes", filterMode.length - 5) !== -1) {
       component.set("classNames", ["active"]);
     }
   },

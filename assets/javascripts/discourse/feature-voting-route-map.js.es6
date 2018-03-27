@@ -3,7 +3,7 @@ export default {
   path: 'users/:username',
   map() {
     this.route('userActivity', {path: 'activity', resetNamespace: true}, function() {
-      this.route('quizs');
+      this.route('quizzes');
     });
   }
 };

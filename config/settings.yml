@@ -1,5 +1,5 @@
 plugins:
-  quizzing_alert_quizs_left:
+  quizzing_alert_quizzes_left:
     default: 10
   quizzing_enabled:
     default: true
@@ -7,7 +7,7 @@ plugins:
   quizzing_show_who_quizd:
     default: true
     client: true
-  quizzing_show_quizs_on_profile:
+  quizzing_show_quizzes_on_profile:
     default: true
     client: true
   quizzing_tl0_quiz_limit:

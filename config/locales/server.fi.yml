@@ -14,5 +14,5 @@ fi:
     quizzing_tl3_quiz_limit: 'Kuinka monta aktiivista ääntä lt3-käyttäjällä voi olla?'
     quizzing_tl4_quiz_limit: 'Kuinka monta aktiivista ääntä lt4-käyttäjällä voi olla?'
     quizzing_show_who_quizd: 'Salli käyttäjien nähdä, ketkä ovat äänestäneet?'
-    quizzing_show_quizs_on_profile: 'Salli käyttäjien nähdä äänet profiilin toimintasyötteessä?'
-    quizzing_alert_quizs_left: 'Ilmoita käyttäjälle, kun näin monta ääntä on jäljellä'
+    quizzing_show_quizzes_on_profile: 'Salli käyttäjien nähdä äänet profiilin toimintasyötteessä?'
+    quizzing_alert_quizzes_left: 'Ilmoita käyttäjälle, kun näin monta ääntä on jäljellä'

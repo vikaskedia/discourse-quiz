@@ -21,10 +21,10 @@ export default createWidget('quiz-box', {
     var quizOptions = this.attach('quiz-options', attrs);
     let contents = [quizCount, quizButton, quizOptions];
 
-    if (state.quizsAlert > 0) {
-      const html = "<div class='quizzing-popup-menu quiz-options popup-menu'>" + I18n.t("quizzing.quizs_left", {
-          count: state.quizsAlert,
-          path: this.currentUser.get("path") + "/activity/quizs"
+    if (state.quizzesAlert > 0) {
+      const html = "<div class='quizzing-popup-menu quiz-options popup-menu'>" + I18n.t("quizzing.quizzes_left", {
+          count: state.quizzesAlert,
+          path: this.currentUser.get("path") + "/activity/quizzes"
       }) + "</div>";
       contents.push(new RawHtml({html}));
     }
@@ -34,8 +34,8 @@ export default createWidget('quiz-box', {
   },
 
   hideVotesAlert() {
-    if (this.state.quizsAlert) {
-      this.state.quizsAlert = null;
+    if (this.state.quizzesAlert) {
+      this.state.quizzesAlert = null;
       this.scheduleRerender();
     }
   },
@@ -59,9 +59,9 @@ export default createWidget('quiz-box', {
     }).then(result => {
       topic.set('quiz_count', result.quiz_count);
       topic.set('user_quizd', true);
-      this.currentUser.set('quizs_exceeded', !result.can_quiz);
+      this.currentUser.set('quizzes_exceeded', !result.can_quiz);
       if (result.alert) {
-        state.quizsAlert = result.quizs_left;
+        state.quizzesAlert = result.quizzes_left;
         this.scheduleRerender();
       }
       topic.set('who_quizd', result.who_quizd);
@@ -80,7 +80,7 @@ export default createWidget('quiz-box', {
     }).then(result => {
       topic.set('quiz_count', result.quiz_count);
       topic.set('user_quizd', false);
-      this.currentUser.set('quizs_exceeded', !result.can_quiz);
+      this.currentUser.set('quizzes_exceeded', !result.can_quiz);
       topic.set('who_quizd', result.who_quizd);
       state.allowClick = true;
     }).catch(popupAjaxError);

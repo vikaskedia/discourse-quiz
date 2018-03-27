@@ -9,8 +9,8 @@ es:
   js:
     quizzing:
       reached_limit: "Te has quedado sin votos, ¡elimina un voto existente!"
-      list_quizs: "Lista tus votos"
-      quizs_nav_help: "temas más votados"
+      list_quizzes: "Lista tus votos"
+      quizzes_nav_help: "temas más votados"
       quizd: "Has votado este tema"
       allow_topic_quizzing: "Permitir a los usuarios votar los temas de esta categoría"
       quiz_title: "Votar"
@@ -18,12 +18,12 @@ es:
       quizd_title: "Votado"
       quizzing_closed_title: "Cerrado"
       quizzing_limit: "Limitado"
-      quizs_left:
+      quizzes_left:
         one: "Tienes 1 voto más, ver <a href='{{path}}'>tus votos</a>."
         other: "Tienes {{count}} votos más, ver <a href='{{path}}'>tus votos</a>."
-      quizs:
+      quizzes:
         one: "1 voto"
         other: "{{count}} votos"
     filters:
-      quizs:
+      quizzes:
         title: "Votos"

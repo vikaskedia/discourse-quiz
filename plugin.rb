@@ -10,10 +10,10 @@ register_asset "stylesheets/mobile/feature-quizzing.scss", :mobile
 
 enabled_site_setting :quizzing_enabled
 
-Discourse.top_menu_items.push(:quizs)
-Discourse.anonymous_top_menu_items.push(:quizs)
-Discourse.filters.push(:quizs)
-Discourse.anonymous_filters.push(:quizs)
+Discourse.top_menu_items.push(:quizzes)
+Discourse.anonymous_top_menu_items.push(:quizzes)
+Discourse.filters.push(:quizzes)
+Discourse.anonymous_filters.push(:quizzes)
 
 after_initialize do
 
@@ -108,29 +108,29 @@ after_initialize do
   require_dependency 'user'
   class ::User
       def quiz_count
-        if self.custom_fields["quizs"]
-          user_quizs = self.custom_fields["quizs"]
-          user_quizs.length - 1
+        if self.custom_fields["quizzes"]
+          user_quizzes = self.custom_fields["quizzes"]
+          user_quizzes.length - 1
         else
           0
         end
       end
 
-      def alert_low_quizs?
-        (quiz_limit - quiz_count) <= SiteSetting.quizzing_alert_quizs_left
+      def alert_low_quizzes?
+        (quiz_limit - quiz_count) <= SiteSetting.quizzing_alert_quizzes_left
       end
 
-      def quizs
-        if self.custom_fields["quizs"]
-          self.custom_fields["quizs"]
+      def quizzes
+        if self.custom_fields["quizzes"]
+          self.custom_fields["quizzes"]
         else
           [nil]
         end
       end
 
-      def quizs_archive
-        if self.custom_fields["quizs_archive"]
-          return self.custom_fields["quizs_archive"]
+      def quizzes_archive
+        if self.custom_fields["quizzes_archive"]
+          return self.custom_fields["quizzes_archive"]
         else
           return [nil]
         end
@@ -148,9 +148,9 @@ after_initialize do
 
   require_dependency 'current_user_serializer'
   class ::CurrentUserSerializer
-    attributes :quizs_exceeded,  :quiz_count
+    attributes :quizzes_exceeded,  :quiz_count
 
-    def quizs_exceeded
+    def quizzes_exceeded
       object.reached_quizzing_limit?
     end
 
@@ -176,8 +176,8 @@ after_initialize do
     end
 
     def user_quizd(user)
-      if user && user.custom_fields["quizs"]
-        user.custom_fields["quizs"].include? self.id.to_s
+      if user && user.custom_fields["quizzes"]
+        user.custom_fields["quizzes"].include? self.id.to_s
       else
         false
       end
@@ -188,7 +188,7 @@ after_initialize do
   require_dependency 'list_controller'
   class ::ListController
     def quizd_by
-      unless SiteSetting.quizzing_show_quizs_on_profile
+      unless SiteSetting.quizzing_show_quizzes_on_profile
         render nothing: true, status: 404
       end
       list_opts = build_topic_list_options
@@ -202,16 +202,16 @@ after_initialize do
 
   require_dependency 'topic_query'
   class ::TopicQuery
-    SORTABLE_MAPPING["quizs"] = "custom_fields.quiz_count"
+    SORTABLE_MAPPING["quizzes"] = "custom_fields.quiz_count"
 
     def list_quizd_by(user)
       create_list(:user_topics) do |topics|
-        topics.where(id: user.custom_fields["quizs"])
+        topics.where(id: user.custom_fields["quizzes"])
       end
     end
 
-    def list_quizs
-      create_list(:quizs, unordered: true) do |topics|
+    def list_quizzes
+      create_list(:quizzes, unordered: true) do |topics|
         topics.joins("left join topic_custom_fields tfv ON tfv.topic_id = topics.id AND tfv.name = 'quiz_count'")
               .order("coalesce(tfv.value,'0')::integer desc, topics.bumped_at desc")
       end
@@ -224,10 +224,10 @@ after_initialize do
     class VoteRelease < Jobs::Base
       def execute(args)
         if Topic.find_by(id: args[:topic_id])
-          UserCustomField.where(name: "quizs", value: args[:topic_id]).find_each do |user_field|
+          UserCustomField.where(name: "quizzes", value: args[:topic_id]).find_each do |user_field|
             user = User.find(user_field.user_id)
-            user.custom_fields["quizs"] = user.quizs.dup - [args[:topic_id].to_s]
-            user.custom_fields["quizs_archive"] = user.quizs_archive.dup.push(args[:topic_id])
+            user.custom_fields["quizzes"] = user.quizzes.dup - [args[:topic_id].to_s]
+            user.custom_fields["quizzes_archive"] = user.quizzes_archive.dup.push(args[:topic_id])
             user.save
           end
         end
@@ -237,10 +237,10 @@ after_initialize do
     class VoteReclaim < Jobs::Base
       def execute(args)
         if Topic.find_by(id: args[:topic_id])
-          UserCustomField.where(name: "quizs_archive", value: args[:topic_id]).find_each do |user_field|
+          UserCustomField.where(name: "quizzes_archive", value: args[:topic_id]).find_each do |user_field|
             user = User.find(user_field.user_id)
-            user.custom_fields["quizs"] = user.quizs.dup.push(args[:topic_id])
-            user.custom_fields["quizs_archive"] = user.quizs_archive.dup - [args[:topic_id].to_s]
+            user.custom_fields["quizzes"] = user.quizzes.dup.push(args[:topic_id])
+            user.custom_fields["quizzes_archive"] = user.quizzes_archive.dup - [args[:topic_id].to_s]
             user.save
           end
         end
@@ -265,12 +265,12 @@ after_initialize do
     end
   end
 
-  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_quizzing/quizs_controller')
+  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_quizzing/quizzes_controller')
 
   DiscourseVoting::Engine.routes.draw do
-    post 'quiz' => 'quizs#add'
-    post 'unquiz' => 'quizs#remove'
-    get 'who' => 'quizs#who'
+    post 'quiz' => 'quizzes#add'
+    post 'unquiz' => 'quizzes#remove'
+    get 'who' => 'quizzes#who'
   end
 
   Discourse::Application.routes.append do
