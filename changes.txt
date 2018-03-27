@@ -1,3 +1,13 @@
+mv ~/Downloads/discourse-voting-master.zip .
+
+unzip discourse-voting-master.zip
+
+rm -rf discourse-voting-master.zip
+
+mv discourse-voting-master/* .
+
 find ./ -name "*" | xargs -I X sed -i "s\vote\quiz\g" X
+
 find ./ -name "*" | xargs -I X sed -i "s\voting\quizzing\g" X
+
 find ./ -name "*" | xargs -I X sed -i "s\quizs\quizzes\g" X
