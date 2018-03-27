@@ -1,0 +1,15 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+sk:
+  js:
+    voting:
+      vote_title: "Hlas"
+      vote_title_plural: "Hlasy"
+      voted_title: "Odhlasované"
+      voting_closed_title: "Hlasovanie ukončené"
+      voting_limit: "Limit"

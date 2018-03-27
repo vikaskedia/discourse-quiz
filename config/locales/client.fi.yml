@@ -1,0 +1,29 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+fi:
+  js:
+    voting:
+      reached_limit: "Sinulla ei ole enempää ääniä, poista antamasi ääni!"
+      list_votes: "Kaikki antamasi äänet"
+      votes_nav_help: "ketjut, joilla on eniten ääniä"
+      voted: "Äänestit tätä ketjua"
+      allow_topic_voting: "Salli käyttäjien antaa ääniä ketjuille tällä alueella"
+      vote_title: "Ääni"
+      vote_title_plural: "Äänet"
+      voted_title: "Äänestit"
+      voting_closed_title: "Suljettu"
+      voting_limit: "Yläraja"
+      votes_left:
+        one: "Sinulla on 1 ääni jäljellä, katso <a href='{{path}}'>kaikki äänesi</a>."
+        other: "Sinulla on {{count}} ääntä jäljellä, katso <a href='{{path}}'>kaikki äänesi</a>."
+      votes:
+        one: "1 ääni"
+        other: "{{count}} ääntä"
+    filters:
+      votes:
+        title: "Äänet"

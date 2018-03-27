@@ -1,0 +1,33 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+pl_PL:
+  js:
+    voting:
+      reached_limit: "Oddałeś już maksymalną liczbę głosów!"
+      list_votes: "Lista twoich głosów"
+      votes_nav_help: "tematy z największą liczbą głosów"
+      voted: "Oddałeś już głos"
+      allow_topic_voting: "Pozwól użytkownikom głosować na tematy w tej kategorii"
+      vote_title: "Głosuj"
+      vote_title_plural: "Głosuj"
+      voted_title: "Głosów"
+      voting_closed_title: "Zamknięto"
+      voting_limit: "Limit"
+      votes_left:
+        one: "Pozostał Ci 1 głos, zobacz <a href='{{path}}'>swoje głosy</a>."
+        few: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
+        many: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
+        other: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."
+      votes:
+        one: "1 głos"
+        few: "{{count}} głosy"
+        many: "{{count}} głosów"
+        other: "{{count}} głosów"
+    filters:
+      votes:
+        title: "Głosy"

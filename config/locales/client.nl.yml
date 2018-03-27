@@ -1,0 +1,19 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+nl:
+  js:
+    voting:
+      allow_topic_voting: "Sta gebruikers toe om te stemmen op onderwerpen in deze categorie"
+      vote_title: "Stem"
+      vote_title_plural: "Stemmen"
+      voted_title: "Gestemd"
+      voting_closed_title: "Gesloten"
+      voting_limit: "Limiet"
+    filters:
+      votes:
+        title: "Stemmen"
