@@ -1,0 +1,3 @@
+find ./ -name "*" | xargs -I X sed -i "s\vote\quiz\g" X
+find ./ -name "*" | xargs -I X sed -i "s\voting\quizzing\g" X
+find ./ -name "*" | xargs -I X sed -i "s\quizs\quizzes\g" X
