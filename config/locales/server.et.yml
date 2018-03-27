@@ -7,7 +7,7 @@
 
 et:
   site_settings:
-    voting_enabled: 'Lubada kasutajatel teemasid hinnata?'
-    voting_show_who_quizd: 'Kas lubada kasutajatel näha, kes hindas?'
-    voting_show_quizs_on_profile: 'Kas lubada kasutajatel näha oma hinnanguid tegevusvoos?'
-    voting_alert_quizs_left: 'Teavita kasutajate, kui palju hinnangu andmisi tal veel järgi on'
+    quizzing_enabled: 'Lubada kasutajatel teemasid hinnata?'
+    quizzing_show_who_quizd: 'Kas lubada kasutajatel näha, kes hindas?'
+    quizzing_show_quizs_on_profile: 'Kas lubada kasutajatel näha oma hinnanguid tegevusvoos?'
+    quizzing_alert_quizs_left: 'Teavita kasutajate, kui palju hinnangu andmisi tal veel järgi on'

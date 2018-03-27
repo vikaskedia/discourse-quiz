@@ -7,12 +7,12 @@
 
 de:
   site_settings:
-    voting_enabled: 'Benutzern erlauben, für Themen zu quizn?'
-    voting_tl0_quiz_limit: 'Wie viele aktive Votes sind TL0-Benutzern erlaubt?'
-    voting_tl1_quiz_limit: 'Wie viele aktive Votes sind TL1-Benutzern erlaubt?'
-    voting_tl2_quiz_limit: 'Wie viele aktive Votes sind TL2-Benutzern erlaubt?'
-    voting_tl3_quiz_limit: 'Wie viele aktive Votes sind TL3-Benutzern erlaubt?'
-    voting_tl4_quiz_limit: 'Wie viele aktive Votes sind TL4-Benutzern erlaubt?'
-    voting_show_who_quizd: 'Benutzern erlauben, zu sehen, wer gequizt hat?'
-    voting_show_quizs_on_profile: 'Benutzern erlauben, ihre Votes in ihrem Benutzerprofil einzusehen?'
-    voting_alert_quizs_left: 'Benutzer benachrichten, wenn diese Anzahl von Votes verblieben sind'
+    quizzing_enabled: 'Benutzern erlauben, für Themen zu quizn?'
+    quizzing_tl0_quiz_limit: 'Wie viele aktive Votes sind TL0-Benutzern erlaubt?'
+    quizzing_tl1_quiz_limit: 'Wie viele aktive Votes sind TL1-Benutzern erlaubt?'
+    quizzing_tl2_quiz_limit: 'Wie viele aktive Votes sind TL2-Benutzern erlaubt?'
+    quizzing_tl3_quiz_limit: 'Wie viele aktive Votes sind TL3-Benutzern erlaubt?'
+    quizzing_tl4_quiz_limit: 'Wie viele aktive Votes sind TL4-Benutzern erlaubt?'
+    quizzing_show_who_quizd: 'Benutzern erlauben, zu sehen, wer gequizt hat?'
+    quizzing_show_quizs_on_profile: 'Benutzern erlauben, ihre Votes in ihrem Benutzerprofil einzusehen?'
+    quizzing_alert_quizs_left: 'Benutzer benachrichten, wenn diese Anzahl von Votes verblieben sind'

@@ -7,17 +7,17 @@
 
 ur:
   js:
-    voting:
+    quizzing:
       reached_limit: "آپ کے ووٹ ختم ہو چکے ہیں، کسی موجودہ ووٹ کو ہٹا ئیں!"
       list_quizs: "اپنے ووٹوں کی فہرست"
       quizs_nav_help: "سب سے زیادہ ووٹوں والے ٹاپک"
       quizd: "آپ نے اِس ٹاپک پر ووٹ کیا"
-      allow_topic_voting: "صارفین کو اس زمرہ کے ٹاپکس پر ووٹ کرنے کی اجازت دیں"
+      allow_topic_quizzing: "صارفین کو اس زمرہ کے ٹاپکس پر ووٹ کرنے کی اجازت دیں"
       quiz_title: "ووٹ"
       quiz_title_plural: "ووٹ"
       quizd_title: "ووٹ کیا"
-      voting_closed_title: "بند"
-      voting_limit: "حد"
+      quizzing_closed_title: "بند"
+      quizzing_limit: "حد"
       quizs_left:
         one: "آپ کے پاس 1 ووٹ باقی ہے، دیکھیے <a href='{{path}}'>آپ کے ووٹ</a>۔"
         other: "آپ کے پاس {{شمار}} ووٹ باقی ہیں، دیکھیے </a>آپ کے ووٹ</a>۔"

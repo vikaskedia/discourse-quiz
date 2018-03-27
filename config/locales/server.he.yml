@@ -7,12 +7,12 @@
 
 he:
   site_settings:
-    voting_enabled: 'לאפשר למשתמשים להצביע על נושאים?'
-    voting_tl0_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 0 לבצע?'
-    voting_tl1_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 1 לבצע?'
-    voting_tl2_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 2 לבצע?'
-    voting_tl3_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 3 לבצע?'
-    voting_tl4_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 4 לבצע?'
-    voting_show_who_quizd: 'לאפשר למשתמשים לראות מי הצביע?'
-    voting_show_quizs_on_profile: 'לאפשר למשתמשים לראות את ההצבעות שלהם בהזנת הפעילות?'
-    voting_alert_quizs_left: 'להודיע למשתמש כאשר נותרו לו מספר מסוים של הצבעות'
+    quizzing_enabled: 'לאפשר למשתמשים להצביע על נושאים?'
+    quizzing_tl0_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 0 לבצע?'
+    quizzing_tl1_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 1 לבצע?'
+    quizzing_tl2_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 2 לבצע?'
+    quizzing_tl3_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 3 לבצע?'
+    quizzing_tl4_quiz_limit: 'כמה הצבעות פעילות מותר למשתמשי רמת אמון 4 לבצע?'
+    quizzing_show_who_quizd: 'לאפשר למשתמשים לראות מי הצביע?'
+    quizzing_show_quizs_on_profile: 'לאפשר למשתמשים לראות את ההצבעות שלהם בהזנת הפעילות?'
+    quizzing_alert_quizs_left: 'להודיע למשתמש כאשר נותרו לו מספר מסוים של הצבעות'

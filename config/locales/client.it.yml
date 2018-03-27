@@ -7,17 +7,17 @@
 
 it:
   js:
-    voting:
+    quizzing:
       reached_limit: "Hai terminato i voti, rimuovi un voto esistente!"
       list_quizs: "Elenca i tuoi voti"
       quizs_nav_help: "argomenti con il maggior numero di voti"
       quizd: "Hai votato su questo argomento"
-      allow_topic_voting: "Permetti agli utenti di votare argomenti in questa categoria"
+      allow_topic_quizzing: "Permetti agli utenti di votare argomenti in questa categoria"
       quiz_title: "Vota"
       quiz_title_plural: "Voti"
       quizd_title: "Votato"
-      voting_closed_title: "Chiuso"
-      voting_limit: "Limite"
+      quizzing_closed_title: "Chiuso"
+      quizzing_limit: "Limite"
       quizs_left:
         one: "Ti resta 1 voto, guarda<a href='{{path}}'>i tuoi voti</a>."
         other: "Ti restano {{count}} voti, guarda<a href='{{path}}'>i tuoi voti</a>."

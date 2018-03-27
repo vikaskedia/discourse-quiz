@@ -6,7 +6,7 @@ function initialize(api) {
 
   api.addPostClassesCallback((post) => {
     if (post.post_number === 1 && post.can_quiz) {
-      return ["voting-post"];
+      return ["quizzing-post"];
     }
   });
   api.includePostAttributes('can_quiz');
@@ -17,12 +17,12 @@ function initialize(api) {
 
     let title;
     if (topic.user_quizd) {
-      title = ` title='${I18n.t('voting.quizd')}'`;
+      title = ` title='${I18n.t('quizzing.quizd')}'`;
     }
 
     let userVotedClass = topic.user_quizd ? " quizd" : "";
     buffer.push(`<a href='${topic.get('url')}' class='list-quiz-count discourse-tag${userVotedClass}'${title}>`);
-    buffer.push(I18n.t('voting.quizs', {count: topic.quiz_count}));
+    buffer.push(I18n.t('quizzing.quizs', {count: topic.quiz_count}));
     if (topic.user_quizd) {
       buffer.push(`<i class='fa fa-star'></i>`);
     }
@@ -36,7 +36,7 @@ function initialize(api) {
 }
 
 export default {
-  name: 'extend-category-for-voting',
+  name: 'extend-category-for-quizzing',
   before: 'inject-discourse-objects',
   initialize(container) {
 
@@ -51,14 +51,14 @@ export default {
         return `${url}/l/quizs`;
       },
 
-      @computed('custom_fields.enable_topic_voting')
-      enable_topic_voting: {
+      @computed('custom_fields.enable_topic_quizzing')
+      enable_topic_quizzing: {
         get(enableField) {
           return enableField === "true";
         },
         set(value) {
           value = value ? "true" : "false";
-          this.set("custom_fields.enable_topic_voting", value);
+          this.set("custom_fields.enable_topic_quizzing", value);
           return value;
         }
       }

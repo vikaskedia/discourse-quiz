@@ -7,12 +7,12 @@
 
 ur:
   site_settings:
-    voting_enabled: 'صارفین کو ٹاپکس پر ووٹ کرنے کی اجازت دیں؟'
-    voting_tl0_quiz_limit: 'TL0 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
-    voting_tl1_quiz_limit: 'TL1 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
-    voting_tl2_quiz_limit: 'TL2 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
-    voting_tl3_quiz_limit: 'TL3 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
-    voting_tl4_quiz_limit: 'TL4 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
-    voting_show_who_quizd: 'صارفین کو، کس نے ووٹ کیا ہے، دیکھنے کی اجازت دیں؟'
-    voting_show_quizs_on_profile: 'صارفین کو اُن کی سرگرمی فیڈ میں اُن کے ووٹ دیکھنے کی اجازت دیں؟'
-    voting_alert_quizs_left: 'صارف کو انتباہ کردیں جب اتنے ووٹ باقی رہ جائیں'
+    quizzing_enabled: 'صارفین کو ٹاپکس پر ووٹ کرنے کی اجازت دیں؟'
+    quizzing_tl0_quiz_limit: 'TL0 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
+    quizzing_tl1_quiz_limit: 'TL1 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
+    quizzing_tl2_quiz_limit: 'TL2 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
+    quizzing_tl3_quiz_limit: 'TL3 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
+    quizzing_tl4_quiz_limit: 'TL4 صارفین کو کتنے فعال ووٹوں کی اجازت ہے؟'
+    quizzing_show_who_quizd: 'صارفین کو، کس نے ووٹ کیا ہے، دیکھنے کی اجازت دیں؟'
+    quizzing_show_quizs_on_profile: 'صارفین کو اُن کی سرگرمی فیڈ میں اُن کے ووٹ دیکھنے کی اجازت دیں؟'
+    quizzing_alert_quizs_left: 'صارف کو انتباہ کردیں جب اتنے ووٹ باقی رہ جائیں'

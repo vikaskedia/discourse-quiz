@@ -7,7 +7,7 @@ export default createWidget('quiz-button', {
   buildClasses(attrs) {
     var buttonClass = "";
     if (attrs.closed){
-      buttonClass = "voting-closed";
+      buttonClass = "quizzing-closed";
     }
     else{
       if (!attrs.user_quizd){
@@ -22,31 +22,31 @@ export default createWidget('quiz-button', {
         }
       }
     }
-    if (this.siteSettings.voting_show_who_quizd) {
+    if (this.siteSettings.quizzing_show_who_quizd) {
       buttonClass += ' show-pointer';
     }
     return buttonClass;
   },
 
   html(attrs){
-    var buttonTitle = I18n.t('voting.quiz_title');
+    var buttonTitle = I18n.t('quizzing.quiz_title');
     if (!this.currentUser){
       buttonTitle = I18n.t('log_in');
     }
     else{
       if (attrs.closed){
-        buttonTitle = I18n.t('voting.voting_closed_title');
+        buttonTitle = I18n.t('quizzing.quizzing_closed_title');
       }
       else{
         if (attrs.user_quizd){
-          buttonTitle = I18n.t('voting.quizd_title');
+          buttonTitle = I18n.t('quizzing.quizd_title');
         }
         else{
           if (this.currentUser && this.currentUser.quizs_exceeded){
-            buttonTitle = I18n.t('voting.voting_limit');
+            buttonTitle = I18n.t('quizzing.quizzing_limit');
           }
           else{
-            buttonTitle = I18n.t('voting.quiz_title');
+            buttonTitle = I18n.t('quizzing.quiz_title');
           }
         }
       }

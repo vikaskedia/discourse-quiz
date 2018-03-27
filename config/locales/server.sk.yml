@@ -7,5 +7,5 @@
 
 sk:
   site_settings:
-    voting_enabled: 'Povoľiť používateľom hlasovať o témach?'
-    voting_show_who_quizd: 'Môžu používatelia vidieť kto hlasoval?'
+    quizzing_enabled: 'Povoľiť používateľom hlasovať o témach?'
+    quizzing_show_who_quizd: 'Môžu používatelia vidieť kto hlasoval?'

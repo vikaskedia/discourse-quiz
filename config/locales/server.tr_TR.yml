@@ -7,11 +7,11 @@
 
 tr_TR:
   site_settings:
-    voting_enabled: 'Kullanıcıların konular da oy kullanmasına izin verilsin mi?'
-    voting_tl0_quiz_limit: 'Seviye 0 kullanıcılar ne kadar oy kullanabilir?'
-    voting_tl1_quiz_limit: 'Seviye 1 kullanıcıları ne kadar oy kullanabilir?'
-    voting_tl2_quiz_limit: 'Seviye 2 kullanıcıları ne kadar oy kullanabilir?'
-    voting_tl3_quiz_limit: 'Seviye 3 kullanıcıları ne kadar oy kullanabilir?'
-    voting_tl4_quiz_limit: 'Seviye 4 kullanıcıları ne kadar oy kullanabilir?'
-    voting_show_who_quizd: 'Kullanıcıların, kimlerin oy verdiğini görmesine izin ver?'
-    voting_show_quizs_on_profile: 'Kullanıcıların etkinliklerin de de oylarını görmesine izin verilsin mi?'
+    quizzing_enabled: 'Kullanıcıların konular da oy kullanmasına izin verilsin mi?'
+    quizzing_tl0_quiz_limit: 'Seviye 0 kullanıcılar ne kadar oy kullanabilir?'
+    quizzing_tl1_quiz_limit: 'Seviye 1 kullanıcıları ne kadar oy kullanabilir?'
+    quizzing_tl2_quiz_limit: 'Seviye 2 kullanıcıları ne kadar oy kullanabilir?'
+    quizzing_tl3_quiz_limit: 'Seviye 3 kullanıcıları ne kadar oy kullanabilir?'
+    quizzing_tl4_quiz_limit: 'Seviye 4 kullanıcıları ne kadar oy kullanabilir?'
+    quizzing_show_who_quizd: 'Kullanıcıların, kimlerin oy verdiğini görmesine izin ver?'
+    quizzing_show_quizs_on_profile: 'Kullanıcıların etkinliklerin de de oylarını görmesine izin verilsin mi?'

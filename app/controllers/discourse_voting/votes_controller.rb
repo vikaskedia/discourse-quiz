@@ -18,7 +18,7 @@ module DiscourseVoting
 
       quizd = false
 
-      unless current_user.reached_voting_limit?
+      unless current_user.reached_quizzing_limit?
 
         current_user.custom_fields["quizs"] = current_user.quizs.dup.push(params["topic_id"])
         current_user.save
@@ -29,7 +29,7 @@ module DiscourseVoting
       end
 
       obj = {
-        can_quiz: !current_user.reached_voting_limit?,
+        can_quiz: !current_user.reached_quizzing_limit?,
         quiz_limit: current_user.quiz_limit,
         quiz_count: topic.custom_fields["quiz_count"].to_i,
         who_quizd: who_quizd(topic),
@@ -51,7 +51,7 @@ module DiscourseVoting
       update_quiz_count(topic)
 
       obj = {
-        can_quiz: !current_user.reached_voting_limit?,
+        can_quiz: !current_user.reached_quizzing_limit?,
         quiz_limit: current_user.quiz_limit,
         quiz_count: topic.custom_fields["quiz_count"].to_i,
         who_quizd: who_quizd(topic),
@@ -69,7 +69,7 @@ module DiscourseVoting
     end
 
     def who_quizd(topic)
-      return nil unless SiteSetting.voting_show_who_quizd
+      return nil unless SiteSetting.quizzing_show_who_quizd
 
       users = User.where("id in (
         SELECT user_id FROM user_custom_fields WHERE name IN ('quizs', 'quizs_archive') AND value = ?

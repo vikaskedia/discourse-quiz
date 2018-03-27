@@ -20,7 +20,7 @@ export default createWidget('quiz-count', {
   html(attrs){
     let quizCount = h('div.quiz-count', attrs.quiz_count.toString());
     let whoVoted = null;
-    if (this.siteSettings.voting_show_who_quizd && this.state.whoVotedUsers && this.state.whoVotedUsers.length > 0) {
+    if (this.siteSettings.quizzing_show_who_quizd && this.state.whoVotedUsers && this.state.whoVotedUsers.length > 0) {
       whoVoted = this.attach('small-user-list', {
         users: this.state.whoVotedUsers,
         addSelf: attrs.liked,
@@ -30,13 +30,13 @@ export default createWidget('quiz-count', {
 
     let buffer = [quizCount];
     if (whoVoted) {
-      buffer.push(h('div.who-quizd.popup-menu.voting-popup-menu', [whoVoted]));
+      buffer.push(h('div.who-quizd.popup-menu.quizzing-popup-menu', [whoVoted]));
     }
     return buffer;
   },
 
   click(){
-    if (this.siteSettings.voting_show_who_quizd && this.attrs.quiz_count > 0) {
+    if (this.siteSettings.quizzing_show_who_quizd && this.attrs.quiz_count > 0) {
       if (this.state.whoVotedUsers === null) {
         return this.getWhoVoted();
       } else {
@@ -50,7 +50,7 @@ export default createWidget('quiz-count', {
   },
 
   getWhoVoted() {
-    return ajax("/voting/who", {
+    return ajax("/quizzing/who", {
       type: 'GET',
       data: {
         topic_id: this.attrs.id

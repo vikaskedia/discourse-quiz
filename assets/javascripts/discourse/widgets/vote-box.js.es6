@@ -4,11 +4,11 @@ import RawHtml from 'discourse/widgets/raw-html';
 import { popupAjaxError } from 'discourse/lib/ajax-error';
 
 export default createWidget('quiz-box', {
-  tagName: 'div.voting-wrapper',
+  tagName: 'div.quizzing-wrapper',
   buildKey: () => 'quiz-box',
 
   buildClasses() {
-    if (this.siteSettings.voting_show_who_quizd) { return 'show-pointer'; }
+    if (this.siteSettings.quizzing_show_who_quizd) { return 'show-pointer'; }
   },
 
   defaultState() {
@@ -22,7 +22,7 @@ export default createWidget('quiz-box', {
     let contents = [quizCount, quizButton, quizOptions];
 
     if (state.quizsAlert > 0) {
-      const html = "<div class='voting-popup-menu quiz-options popup-menu'>" + I18n.t("voting.quizs_left", {
+      const html = "<div class='quizzing-popup-menu quiz-options popup-menu'>" + I18n.t("quizzing.quizs_left", {
           count: state.quizsAlert,
           path: this.currentUser.get("path") + "/activity/quizs"
       }) + "</div>";
@@ -51,7 +51,7 @@ export default createWidget('quiz-box', {
   addVote(){
     var topic = this.attrs;
     var state = this.state;
-    return ajax("/voting/quiz", {
+    return ajax("/quizzing/quiz", {
       type: 'POST',
       data: {
         topic_id: topic.id
@@ -72,7 +72,7 @@ export default createWidget('quiz-box', {
   removeVote(){
     var topic = this.attrs;
     var state = this.state;
-    return ajax("/voting/unquiz", {
+    return ajax("/quizzing/unquiz", {
       type: 'POST',
       data: {
         topic_id: topic.id

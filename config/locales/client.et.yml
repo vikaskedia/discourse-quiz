@@ -7,9 +7,9 @@
 
 et:
   js:
-    voting:
+    quizzing:
       quizd: "Sa hindasid seda teemat"
       quiz_title: "Hinda"
       quiz_title_plural: "HInnangud"
-      voting_closed_title: "Suletud"
-      voting_limit: "Limiit"
+      quizzing_closed_title: "Suletud"
+      quizzing_limit: "Limiit"

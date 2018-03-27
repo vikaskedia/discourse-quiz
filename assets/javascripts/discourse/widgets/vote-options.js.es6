@@ -5,7 +5,7 @@ export default createWidget('quiz-options', {
   tagName: 'div.quiz-options',
 
   buildClasses() {
-    return 'voting-popup-menu popup-menu hidden';
+    return 'quizzing-popup-menu popup-menu hidden';
   },
 
   html(attrs){
@@ -16,9 +16,9 @@ export default createWidget('quiz-options', {
     }
     else if (this.currentUser && this.currentUser.quizs_exceeded && !attrs.user_quizd) {
       contents.push([
-          h("div", I18n.t("voting.reached_limit")),
+          h("div", I18n.t("quizzing.reached_limit")),
           h("p",
-            h("a",{ href: this.currentUser.get("path") + "/activity/quizs" }, I18n.t("voting.list_quizs"))
+            h("a",{ href: this.currentUser.get("path") + "/activity/quizs" }, I18n.t("quizzing.list_quizs"))
           )
       ]);
     }

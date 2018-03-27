@@ -7,12 +7,12 @@
 
 cs:
   site_settings:
-    voting_enabled: 'Povolit uživatelům hlasovat o tématech?'
-    voting_tl0_quiz_limit: 'Kolik aktivních hlasů povolit TL0 uživatelům?'
-    voting_tl1_quiz_limit: 'Kolik aktivních hlasů povolit TL1 uživatelům?'
-    voting_tl2_quiz_limit: 'Kolik aktivních hlasů povolit TL2 uživatelům?'
-    voting_tl3_quiz_limit: 'Kolik aktivních hlasů povolit TL3 uživatelům?'
-    voting_tl4_quiz_limit: 'Kolik aktivních hlasů povolit TL4 uživatelům?'
-    voting_show_who_quizd: 'Povolit uživatelům zobrazit, kdo jak hlasoval?'
-    voting_show_quizs_on_profile: 'Povolit uživatelům zobrazit jejich hlasování ve feedu aktivit?'
-    voting_alert_quizs_left: 'Upozornit uživatele, když mu zbývá tolik hlasů'
+    quizzing_enabled: 'Povolit uživatelům hlasovat o tématech?'
+    quizzing_tl0_quiz_limit: 'Kolik aktivních hlasů povolit TL0 uživatelům?'
+    quizzing_tl1_quiz_limit: 'Kolik aktivních hlasů povolit TL1 uživatelům?'
+    quizzing_tl2_quiz_limit: 'Kolik aktivních hlasů povolit TL2 uživatelům?'
+    quizzing_tl3_quiz_limit: 'Kolik aktivních hlasů povolit TL3 uživatelům?'
+    quizzing_tl4_quiz_limit: 'Kolik aktivních hlasů povolit TL4 uživatelům?'
+    quizzing_show_who_quizd: 'Povolit uživatelům zobrazit, kdo jak hlasoval?'
+    quizzing_show_quizs_on_profile: 'Povolit uživatelům zobrazit jejich hlasování ve feedu aktivit?'
+    quizzing_alert_quizs_left: 'Upozornit uživatele, když mu zbývá tolik hlasů'

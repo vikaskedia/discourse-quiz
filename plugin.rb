@@ -1,14 +1,14 @@
-# name: discourse-voting
+# name: discourse-quizzing
 # about: Adds the ability to quiz on features in a specified category.
 # version: 0.4
 # author: Joe Buhlig joebuhlig.com, Sam Saffron
-# url: https://www.github.com/joebuhlig/discourse-feature-voting
+# url: https://www.github.com/joebuhlig/discourse-feature-quizzing
 
-register_asset "stylesheets/common/feature-voting.scss"
-register_asset "stylesheets/desktop/feature-voting.scss", :desktop
-register_asset "stylesheets/mobile/feature-voting.scss", :mobile
+register_asset "stylesheets/common/feature-quizzing.scss"
+register_asset "stylesheets/desktop/feature-quizzing.scss", :desktop
+register_asset "stylesheets/mobile/feature-quizzing.scss", :mobile
 
-enabled_site_setting :voting_enabled
+enabled_site_setting :quizzing_enabled
 
 Discourse.top_menu_items.push(:quizs)
 Discourse.anonymous_top_menu_items.push(:quizs)
@@ -73,35 +73,35 @@ after_initialize do
   }
 
   class ::Category
-      def self.reset_voting_cache
-        @allowed_voting_cache["allowed"] =
+      def self.reset_quizzing_cache
+        @allowed_quizzing_cache["allowed"] =
           begin
             Set.new(
               CategoryCustomField
-                .where(name: "enable_topic_voting", value: "true")
+                .where(name: "enable_topic_quizzing", value: "true")
                 .pluck(:category_id)
             )
           end
       end
 
-      @allowed_voting_cache = DistributedCache.new("allowed_voting")
+      @allowed_quizzing_cache = DistributedCache.new("allowed_quizzing")
 
       def self.can_quiz?(category_id)
-        return false unless SiteSetting.voting_enabled
+        return false unless SiteSetting.quizzing_enabled
 
-        unless set = @allowed_voting_cache["allowed"]
-          set = reset_voting_cache
+        unless set = @allowed_quizzing_cache["allowed"]
+          set = reset_quizzing_cache
         end
         set.include?(category_id)
       end
 
 
-      after_save :reset_voting_cache
+      after_save :reset_quizzing_cache
 
 
       protected
-      def reset_voting_cache
-        ::Category.reset_voting_cache
+      def reset_quizzing_cache
+        ::Category.reset_quizzing_cache
       end
   end
 
@@ -117,7 +117,7 @@ after_initialize do
       end
 
       def alert_low_quizs?
-        (quiz_limit - quiz_count) <= SiteSetting.voting_alert_quizs_left
+        (quiz_limit - quiz_count) <= SiteSetting.quizzing_alert_quizs_left
       end
 
       def quizs
@@ -136,12 +136,12 @@ after_initialize do
         end
       end
 
-      def reached_voting_limit?
+      def reached_quizzing_limit?
         quiz_count >= quiz_limit
       end
 
       def quiz_limit
-        SiteSetting.send("voting_tl#{self.trust_level}_quiz_limit")
+        SiteSetting.send("quizzing_tl#{self.trust_level}_quiz_limit")
       end
 
   end
@@ -151,7 +151,7 @@ after_initialize do
     attributes :quizs_exceeded,  :quiz_count
 
     def quizs_exceeded
-      object.reached_voting_limit?
+      object.reached_quizzing_limit?
     end
 
     def quiz_count
@@ -164,7 +164,7 @@ after_initialize do
   class ::Topic
 
     def can_quiz?
-      SiteSetting.voting_enabled && Category.can_quiz?(category_id) && category.topic_id != id
+      SiteSetting.quizzing_enabled && Category.can_quiz?(category_id) && category.topic_id != id
     end
 
     def quiz_count
@@ -188,7 +188,7 @@ after_initialize do
   require_dependency 'list_controller'
   class ::ListController
     def quizd_by
-      unless SiteSetting.voting_show_quizs_on_profile
+      unless SiteSetting.quizzing_show_quizs_on_profile
         render nothing: true, status: 404
       end
       list_opts = build_topic_list_options
@@ -265,7 +265,7 @@ after_initialize do
     end
   end
 
-  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_voting/quizs_controller')
+  require File.expand_path(File.dirname(__FILE__) + '/app/controllers/discourse_quizzing/quizs_controller')
 
   DiscourseVoting::Engine.routes.draw do
     post 'quiz' => 'quizs#add'
@@ -274,7 +274,7 @@ after_initialize do
   end
 
   Discourse::Application.routes.append do
-    mount ::DiscourseVoting::Engine, at: "/voting"
+    mount ::DiscourseVoting::Engine, at: "/quizzing"
     # USERNAME_ROUTE_FORMAT is deprecated but we may need to support it for older installs
     username_route_format = defined?(RouteFormat) ? RouteFormat.username : USERNAME_ROUTE_FORMAT
     get "topics/quizd-by/:username" => "list#quizd_by", as: "quizd_by", constraints: {username: username_route_format}

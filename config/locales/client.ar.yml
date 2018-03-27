@@ -7,17 +7,17 @@
 
 ar:
   js:
-    voting:
+    quizzing:
       reached_limit: "لم يعد بإمكانك التصويت الآن، الرجاء حذف تصويت"
       list_quizs: "قائمة تصويتاتك"
       quizs_nav_help: "المواضيع الأكثر تصويتا"
       quizd: "لقد صوّت على هذا الموضوع"
-      allow_topic_voting: "السماح للمستخدمين بالتصويت على المواضيع في هاته الفئة"
+      allow_topic_quizzing: "السماح للمستخدمين بالتصويت على المواضيع في هاته الفئة"
       quiz_title: "صوّت"
       quiz_title_plural: "التصويتات"
       quizd_title: "تم التصويت"
-      voting_closed_title: "مغلق"
-      voting_limit: "الحد"
+      quizzing_closed_title: "مغلق"
+      quizzing_limit: "الحد"
     filters:
       quizs:
         title: "أصوات"

@@ -7,17 +7,17 @@
 
 cs:
   js:
-    voting:
+    quizzing:
       reached_limit: "Došly ti hlasy. Odeber si existující hlas."
       list_quizs: "Seznam tvých hlasů"
       quizs_nav_help: "témata s nejvíce hlasy"
       quizd: "Pro toto téma jste hlasovali"
-      allow_topic_voting: "Povolit uživatelům volit pro témata v této kategorii"
+      allow_topic_quizzing: "Povolit uživatelům volit pro témata v této kategorii"
       quiz_title: "Hlasovat"
       quiz_title_plural: "Hlasy"
       quizd_title: "Odhlasováno"
-      voting_closed_title: "Uzavřeno"
-      voting_limit: "limit"
+      quizzing_closed_title: "Uzavřeno"
+      quizzing_limit: "limit"
       quizs_left:
         one: "Zbývá vám 1 hlas, podívejte se na <a href='{{path}}'>své hlasy</a>."
         few: "Zbývají vám {{count}} hlasy, podívejte se <a href='{{path}}'>na své hlasy</a>."

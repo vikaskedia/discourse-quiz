@@ -7,17 +7,17 @@
 
 pl_PL:
   js:
-    voting:
+    quizzing:
       reached_limit: "Oddałeś już maksymalną liczbę głosów!"
       list_quizs: "Lista twoich głosów"
       quizs_nav_help: "tematy z największą liczbą głosów"
       quizd: "Oddałeś już głos"
-      allow_topic_voting: "Pozwól użytkownikom głosować na tematy w tej kategorii"
+      allow_topic_quizzing: "Pozwól użytkownikom głosować na tematy w tej kategorii"
       quiz_title: "Głosuj"
       quiz_title_plural: "Głosuj"
       quizd_title: "Głosów"
-      voting_closed_title: "Zamknięto"
-      voting_limit: "Limit"
+      quizzing_closed_title: "Zamknięto"
+      quizzing_limit: "Limit"
       quizs_left:
         one: "Pozostał Ci 1 głos, zobacz <a href='{{path}}'>swoje głosy</a>."
         few: "Pozostało Ci {{count}} głosów, zobacz <a href='{{path}}'>swoje głosy</a>."

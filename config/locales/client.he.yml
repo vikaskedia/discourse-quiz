@@ -7,17 +7,17 @@
 
 he:
   js:
-    voting:
+    quizzing:
       reached_limit: "נגמרו לך ההצבעות, עליך להסיר הצבעה קיימת!"
       list_quizs: "הצגת ההצבעות שלך"
       quizs_nav_help: "נושאים עם הכי הרבה הצבעות"
       quizd: "הצבעת לנושא זה"
-      allow_topic_voting: "לאפשר למשתמשים להצביע על נושאים בקטגוריה זו"
+      allow_topic_quizzing: "לאפשר למשתמשים להצביע על נושאים בקטגוריה זו"
       quiz_title: "הצבעה"
       quiz_title_plural: "הצבעות"
       quizd_title: "התקבלה הצבעה"
-      voting_closed_title: "נסגר"
-      voting_limit: "מגבלה"
+      quizzing_closed_title: "נסגר"
+      quizzing_limit: "מגבלה"
       quizs_left:
         one: "נותרה לך הצבעה אחת, הצגת <a href='{{path}}'>ההצבעות שלך</a>."
         other: "נותרו לך {{count}} הצבעות, להציג את <a href='{{path}}'>ההצבעות שלך</a>."

@@ -7,13 +7,13 @@
 
 nl:
   js:
-    voting:
-      allow_topic_voting: "Sta gebruikers toe om te stemmen op onderwerpen in deze categorie"
+    quizzing:
+      allow_topic_quizzing: "Sta gebruikers toe om te stemmen op onderwerpen in deze categorie"
       quiz_title: "Stem"
       quiz_title_plural: "Stemmen"
       quizd_title: "Gestemd"
-      voting_closed_title: "Gesloten"
-      voting_limit: "Limiet"
+      quizzing_closed_title: "Gesloten"
+      quizzing_limit: "Limiet"
     filters:
       quizs:
         title: "Stemmen"

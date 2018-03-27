@@ -7,17 +7,17 @@
 
 pt_BR:
   js:
-    voting:
+    quizzing:
       reached_limit: "Você está sem votos, remova um voto existente!"
       list_quizs: "Mostrar seus votos"
       quizs_nav_help: "tópicos mais votados"
       quizd: "Você votou neste tópico"
-      allow_topic_voting: "Permitir que usuários quizm em tópicos desta categoria"
+      allow_topic_quizzing: "Permitir que usuários quizm em tópicos desta categoria"
       quiz_title: "Votar"
       quiz_title_plural: "Votos"
       quizd_title: "Votado"
-      voting_closed_title: "Fechado"
-      voting_limit: "Limite"
+      quizzing_closed_title: "Fechado"
+      quizzing_limit: "Limite"
     filters:
       quizs:
         title: "Votos"

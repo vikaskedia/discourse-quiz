@@ -7,12 +7,12 @@
 
 it:
   site_settings:
-    voting_enabled: 'Consentire agli utenti di votare argomenti?'
-    voting_tl0_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 0?'
-    voting_tl1_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 1?'
-    voting_tl2_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 2?'
-    voting_tl3_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 3?'
-    voting_tl4_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 4?'
-    voting_show_who_quizd: 'Consentire agli utenti di vedere chi ha votato?'
-    voting_show_quizs_on_profile: 'Consentire agli utenti di vedere i propri voti nelle attività del profilo?'
-    voting_alert_quizs_left: 'Avverti l''utente quando mancan questo numero di voti'
+    quizzing_enabled: 'Consentire agli utenti di votare argomenti?'
+    quizzing_tl0_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 0?'
+    quizzing_tl1_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 1?'
+    quizzing_tl2_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 2?'
+    quizzing_tl3_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 3?'
+    quizzing_tl4_quiz_limit: 'Quanti voti attivi sono consentiti agli utenti con livello di esperienza 4?'
+    quizzing_show_who_quizd: 'Consentire agli utenti di vedere chi ha votato?'
+    quizzing_show_quizs_on_profile: 'Consentire agli utenti di vedere i propri voti nelle attività del profilo?'
+    quizzing_alert_quizs_left: 'Avverti l''utente quando mancan questo numero di voti'

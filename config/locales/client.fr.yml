@@ -7,17 +7,17 @@
 
 fr:
   js:
-    voting:
+    quizzing:
       reached_limit: "Vous n'avez plus de quizs disponibles, enlevez-en un !"
       list_quizs: "Lister vos quizs"
       quizs_nav_help: "sujets les plus votés"
       quizd: "Vous avez voté pour ce sujet"
-      allow_topic_voting: "Autoriser les utilisateurs à quizr dans cette catégorie"
+      allow_topic_quizzing: "Autoriser les utilisateurs à quizr dans cette catégorie"
       quiz_title: "Vote"
       quiz_title_plural: "Votes"
       quizd_title: "Voté"
-      voting_closed_title: "Fermé"
-      voting_limit: "Limite"
+      quizzing_closed_title: "Fermé"
+      quizzing_limit: "Limite"
       quizs_left:
         one: "Vous avec 1 quiz restant, consultez <a href='{{path}}'>vos quizs</a>."
         other: "Vous avez {{count}} quizs restant, consultez <a href='{{path}}'>vos quizs</a>."

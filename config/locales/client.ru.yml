@@ -7,17 +7,17 @@
 
 ru:
   js:
-    voting:
+    quizzing:
       reached_limit: "У вас закончились голоса, удалите часть ваших голосов!"
       list_quizs: "Посмотреть ваши голоса"
       quizs_nav_help: "темы с наибольшим количеством голосов"
       quizd: "Вы голосовали по этой теме"
-      allow_topic_voting: "Разрешить пользователям голосовать по темам в этом разделе"
+      allow_topic_quizzing: "Разрешить пользователям голосовать по темам в этом разделе"
       quiz_title: "Голос"
       quiz_title_plural: "Голоса"
       quizd_title: "Проголосовало"
-      voting_closed_title: "Закрыто"
-      voting_limit: "Лимит"
+      quizzing_closed_title: "Закрыто"
+      quizzing_limit: "Лимит"
       quizs_left:
         one: "У вас остался 1 голос, проверьте <a href='{{path}}'>свои голоса</a>."
         few: "У вас осталось {{count}} голоса, проверьте <a href='{{path}}'>свои голоса</a>."

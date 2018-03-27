@@ -8,7 +8,7 @@ export default {
     }
   },
   displayName() {
-    return I18n.t("voting.quiz_title_plural");
+    return I18n.t("quizzing.quiz_title_plural");
   },
   setupComponent(args, component) {
     const filterMode = args.filterMode;

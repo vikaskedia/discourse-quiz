@@ -7,17 +7,17 @@
 
 zh_TW:
   js:
-    voting:
+    quizzing:
       reached_limit: "您已退出投票，移除現有的投票！"
       list_quizs: "列出您的投票"
       quizs_nav_help: "最多票數的主題"
       quizd: "您已在此主題投票過了"
-      allow_topic_voting: "讓使用者可以在這個分類中的主題裡投票"
+      allow_topic_quizzing: "讓使用者可以在這個分類中的主題裡投票"
       quiz_title: "投票"
       quiz_title_plural: "投票"
       quizd_title: "已投票"
-      voting_closed_title: "已關閉"
-      voting_limit: "限制"
+      quizzing_closed_title: "已關閉"
+      quizzing_limit: "限制"
       quizs_left:
         other: "您還有 {{count}} 張票，看看<a href='{{path}}'>您的投票</a>。"
       quizs:

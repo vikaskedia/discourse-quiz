@@ -7,9 +7,9 @@
 
 sk:
   js:
-    voting:
+    quizzing:
       quiz_title: "Hlas"
       quiz_title_plural: "Hlasy"
       quizd_title: "Odhlasované"
-      voting_closed_title: "Hlasovanie ukončené"
-      voting_limit: "Limit"
+      quizzing_closed_title: "Hlasovanie ukončené"
+      quizzing_limit: "Limit"
